@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="container-fluid mb-5">
+    <header class="container-fluid mb-5 d-flex">
         <h2>NAVBAR</h2>
+        <div class="container d-flex justify-content-center">
+            <img src="https://windowsreport.com/wp-content/uploads/2017/09/Windows-Store-to-Microsoft-Store.jpg"  alt="Logo de microsoft Store">
+        </div>
     </header>
     <main class="container">
         <section>
             <h1>Microsoft Store administrador</h1>
             <p>Para añadir nuevos juegos apretar en agregar y completar los campos correspondientes</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPelicula"  id="btnAdd">Agregar Juego</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJuego"  id="btnAdd">Agregar Juego</button>
         </section>
         <div class="table-responsive">
             <table class="table table-striped">
@@ -44,7 +47,7 @@
                   <td>Fantasia</td>
                   <td>Roblox</td>
                   <td>21/10/1998</td>
-                  <td>21/10/1998</td>
+                  <td>+ 18</td>
                   <td>
                     <button class="btn btn-warning">Editar</button>
                     <button class="btn btn-danger">Borrar</button>
@@ -53,15 +56,15 @@
               </tbody>
             </table>
           </div>
-          <div class="modal fade" id="modalPelicula" tabindex="-1" aria-labelledby="modalPeliculaLabel" aria-hidden="true">
-    <div class="modal-dialog">
+          <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg	">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalPeliculaLabel">Agregar pelicula</h1>
+          <h1 class="modal-title fs-1" id="modalJuegoLabel">Agregar Juego</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form id="formularioAdministrarPelicula">
+            <form id="formAdministrarJuego">
                 <div class="mb-3">
                   <label for="codigo" class="form-label">Cod</label>
                   <input type="text" class="form-control" id="codigo" aria-describedby="codigo" disabled>
@@ -85,8 +88,10 @@
                     <option value="accion">Accion</option>
                     <option value="fantasia">Fantasia</option>
                     <option value="aventura">Aventura</option>
-                    <option value="comedia">Comedia</option>
+                    <option value="Deportes">Deportes</option>
                     <option value="terror">Terror</option>
+                    <option value="Estrategia">Estrategia</option>
+                    <option value="Lucha y peleas">Lucha y peleas</option>
                   </select>
                 </div>
                 <div class="mb-3">
@@ -98,7 +103,7 @@
                     <input type="text" class="form-control" id="Lanzamiento" aria-describedby="Fecha de Lanzamiento" required>
                 </div>
                 <div class="mb-3">
-                    <label for="genero" class="form-label">Genero</label>
+                    <label for="genero" class="form-label">Edad Recomendada</label>
                     <select id="genero" class="form-control" required>
                       <option value="">Seleccione una opcion</option>
                       <option value="Todo Public">Todo Publico</option>
@@ -115,15 +120,15 @@
     </div>
   </div>
   <!-- MODAL -->
-  <div class="modal fade" id="modalPelicula" tabindex="-1" aria-labelledby="modalPeliculaLabel" aria-hidden="true">
+  <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalPeliculaLabel">Agregar pelicula</h1>
+          <h1 class="modal-title fs-5" id="modalJuegoLabel">Agregar Juego</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form id="formularioAdministrarPelicula">
+            <form id="formularioAdministrarJuego">
                 <div class="mb-3">
                   <label for="codigo" class="form-label">Cod</label>
                   <input type="text" class="form-control" id="codigo" aria-describedby="codigo" required>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft store administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="container-fluid mb-5 d-flex">
+        <h2>NAVBAR</h2>
+        <div class="container d-flex justify-content-center">
+            <img src="https://windowsreport.com/wp-content/uploads/2017/09/Windows-Store-to-Microsoft-Store.jpg"  alt="Logo de microsoft Store">
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h1>Microsoft Store administrador</h1>
+            <p>Para añadir nuevos juegos apretar en agregar y completar los campos correspondientes</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJuego"  id="btnAdd">Agregar Juego</button>
+        </section>
+        <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Titulo</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Genero</th>
+                  <th scope="col">Creador</th>
+                  <th scope="col">Fecha de Lanzamiento</th>
+                  <th scope="col">Edad Recomendada</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Roblox</td>
+                  <td class="text-truncate" style="max-width: 250px;">
+                    Roblox es el mejor universo virtual para crear, compartir experiencias con amigos y ser todo lo que puedas imaginar. Únete a millones de personas que exploran una gran variedad de experiencias inmersivas creadas por una comunidad global.
+                  </td>
+                  <td><img src="https://store-images.s-microsoft.com/image/apps.33296.13510798883386282.a1e5df65-8dd7-427c-9da9-506afa37b254.c4b4e973-664e-4725-ac4b-1f8ffdc53634?q=90&w=177&h=265" alt="Imagen roblox" height="150" width="150"></td>
+                  <td>Fantasia</td>
+                  <td>Roblox</td>
+                  <td>21/10/1998</td>
+                  <td>+ 18</td>
+                  <td>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Borrar</button>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg	">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-1" id="modalJuegoLabel">Agregar Juego</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="formAdministrarJuego">
+                <div class="mb-3">
+                  <label for="codigo" class="form-label">Cod</label>
+                  <input type="text" class="form-control" id="codigo" aria-describedby="codigo" disabled>
+                </div>
+                <div class="mb-3">
+                  <label for="titulo" class="form-label">Titulo</label>
+                  <input type="text" class="form-control" id="titulo" aria-describedby="titulo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripcion</label>
+                  <textarea id="descripcion" rows="4" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="imagen" class="form-label">Imagen (Ingrese Url)</label>
+                  <input type="text" class="form-control" id="imagen" aria-describedby="imagen" required>
+                </div>
+                <div class="mb-3">
+                  <label for="genero" class="form-label">Genero</label>
+                  <select id="genero" class="form-control" required>
+                    <option value="">Seleccione una opcion</option>
+                    <option value="accion">Accion</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="terror">Terror</option>
+                    <option value="Estrategia">Estrategia</option>
+                    <option value="Lucha y peleas">Lucha y peleas</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Creador</label>
+                    <input type="text" class="form-control" id="Creador" aria-describedby="Creador" required>
+                </div>
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Fecha de Lanzamiento</label>
+                    <input type="text" class="form-control" id="Lanzamiento" aria-describedby="Fecha de Lanzamiento" required>
+                </div>
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Edad Recomendada</label>
+                    <select id="genero" class="form-control" required>
+                      <option value="">Seleccione una opcion</option>
+                      <option value="Todo Public">Todo Publico</option>
+                      <option value="+ 10 Años">+ 10 Años</option>
+                      <option value="+ 13 Años">+ 13 Años</option>
+                      <option value="+ 17 Años">+ 17 Años</option>
+                      <option value="+ 18 Años">+ 18 Años</option>
+                    </select>
+                  </div>
+                <button type="submit" id="btnSubmit" class="btn btn-primary" >Enviar</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalJuegoLabel">Agregar Juego</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="formularioAdministrarJuego">
+                <div class="mb-3">
+                  <label for="codigo" class="form-label">Cod</label>
+                  <input type="text" class="form-control" id="codigo" aria-describedby="codigo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="titulo" class="form-label">Titulo</label>
+                  <input type="text" class="form-control" id="titulo" aria-describedby="titulo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripcion</label>
+                  <textarea id="descripcion" rows="4" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="imagen" class="form-label">Imagen</label>
+                  <input type="text" class="form-control" id="imagen" aria-describedby="imagen" required>
+                </div>
+                <div class="mb-3">
+                  <label for="genero" class="form-label">Genero</label>
+                  <select id="genero" class="form-control" required>
+                    <option value="">Seleccione una opcion</option>
+                    <option value="accion">Accion</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="terror">Terror</option>
+                  </select>
+                </div>
+                <button type="submit" id="btnSubmit" class="btn btn-primary" >Enviar</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/administrador.js"></script>
+</body>
+</html>

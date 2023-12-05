@@ -1,0 +1,234 @@
+:root{
+    --grisContenedores: #151517;
+    --grisFondo: #1a1b1e;
+    --grisClaro: #484E58;
+    --grisLetras: #b6bcc0;
+    --blancoLetras: #f1f8ff;
+    --verdeBoton: #008746;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--grisFondo);
+}
+header{
+    background-color: var(--grisContenedores);
+    padding: 4px;
+    height: 54px;
+    position: relative;
+    z-index: 1;
+}
+h1{
+    color: var(--blancoLetras);
+    font-size: 30px;
+}
+h2, p, h3, h4, h5{
+    color: var(--blancoLetras);
+}
+ul{
+    
+    list-style: none;
+    padding-left: 0;
+}
+li{
+    color: var(--grisLetras);
+    margin: 5px 0;
+}
+li span{
+    color: var(--grisClaro);
+    font-size: 17px;
+}
+.banner{
+    position: relative;
+}
+.imgBanner{
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+.grisOscuFondo{
+    background-color: var(--grisContenedores);
+}
+.grisFondo{
+    background-color: var(--grisFondo);
+}
+.imgBanner img{
+    filter: blur(15px);
+    z-index: 1;
+    height: 448px;
+    width: 100%;
+    
+}
+.cont-banner{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.65);
+    display: flex;  
+    flex-direction: column; 
+    width: 100%;
+    height: 453px;
+}
+.tituloProducto{
+    display: flex;
+
+}
+.contTitProduct h2{
+    font-family:'Bahnschrift Light';
+    font-size: 40px;
+    color: var(--blancoLetras);
+}
+.contTitProduct p{
+    font-family:'Bahnschrift';
+    font-size: 20px;
+    color: var(--grisLetras)
+}
+.contTitProduct p strong{
+    font-family:'Bahnschrift';
+    font-size: 25px;
+    color: var(--blancoLetras);
+}
+.contTitProduct p i{
+    margin: 10px 2px;
+}
+.botonesProducto{
+    margin: 34px 0;
+    display: flex;
+}
+.btnPersonalizado{
+    padding: 0px 18px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    background-color: var(--verdeBoton);
+}
+.btnPersonalizado span{
+    background-color: var(--blancoLetras);
+    color: var(--verdeBoton);
+    font-size: 10px;
+    margin-left: 5px; 
+}
+.btnSecundarios{
+    background-color: var(--grisClaro);
+    border-color: var(--grisClaro);
+    min-width: 62px;
+    margin-right: 20px;
+}
+
+.botonesProducto p{
+    color: var(--blancoLetras);;
+    padding: 10px;
+    
+}
+
+/* CATEGORIA */
+.categoria{
+    position: relative;
+    z-index: 1;
+    background-color: var(--grisContenedores);
+    color: var(--blancoLetras);
+}
+.esrbRate{
+    display: flex;
+}
+.esrbRate{
+    display: flex;
+}
+.esrbRate hr{
+    width: 100px;
+    border-width: 3px;  
+}
+.esrbRate a{
+    text-decoration: none;
+    color: var(--blancoLetras);
+    background-color: var(--grisClaro);
+    padding: 3.5px;
+    border-radius: 5px;
+}
+.esrbRate a:hover{
+    background-color: var(--grisLetras);
+}
+.avisosProducto{
+    color: var(--grisLetras);
+    font-size: 14px;
+}
+.avisosProducto span{
+    text-decoration: underline;
+}
+
+
+
+/* TABS */
+
+.tab_box{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.tab_box button{
+    color: var(--grisClaro);
+    font-family:'Bahnschrift';
+    background-color: var(--grisFondo);
+    border: none;
+    font-size: 19px;
+
+}
+
+.tab_box .tab_btn.active{
+    color: var(--blancoLetras);
+}
+
+.content_box .content{
+    display: none;
+    animation: moving .8s ease;
+}
+@keyframes moving{
+    from{transform: translateX(50px); opacity: 0;}
+    to{transform: translateX(0px); opacity: 1;}
+}
+
+.content_box .content.active{
+    display: block;
+
+}
+
+.line{
+    position:absolute;
+    top: 45px;;
+    left: 0px;
+    width: 90px;
+    height: 5px;
+    background-color: var(--blancoLetras);
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+}
+
+.contenidoDescripcion .galeria{
+    width: 100%;
+    height: 350px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.contenidoDescripcion p{
+    font-size: 14.5px;
+}
+
+.separador{
+    background-color: #484E58;
+    height: 1.5px;
+    width: 100%;
+}

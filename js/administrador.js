@@ -1,6 +1,6 @@
 import Juego from "./class.js";
 
-const listaDeJuegos = [];
+let listaDeJuegos = [];
 const formularioDeJuegos = document.querySelector("#formAdministrarJuego");
 const table = document.querySelector(".table tbody");
 
@@ -45,17 +45,35 @@ const añadirJuego = (juegoNuevo) => {
     <td>
         <div class="d-flex gap-3">
             <button class="btn btn-warning">Editar</button>
-            <button class="btn btn-danger">Borrar</button>
+            <button class="btn btn-danger btnEliminar">Borrar</button>
         </div>
     </td>
   `;
 
+  
   table.appendChild(fila);
+  const btnEliminar = fila.querySelector(".btnEliminar");
+  btnEliminar.addEventListener("click", () => eliminarJuego(juegoNuevo.getCodigo()));
+  formularioDeJuegos.reset()
 };
 
 const guardarLocalStorage = () => {
   localStorage.setItem("listado", JSON.stringify(listaDeJuegos));
 };
+
+const eliminarJuego = (codigo) => {
+    listaDeJuegos = listaDeJuegos.filter((juego) => juego.getCodigo() !== codigo);
+    guardarLocalStorage();
+    renderizarTabla();
+}
+
+const renderizarTabla = () => {
+    table.innerHTML = "";
+
+    listaDeJuegos.forEach((juego) => {
+      añadirJuego(juego);
+    });
+  };
 
 document.addEventListener("DOMContentLoaded", () => {
   const datosGuardados = localStorage.getItem("listado");

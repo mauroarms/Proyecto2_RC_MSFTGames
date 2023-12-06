@@ -1,17 +1,18 @@
-export default class juego{
+export default class Juego{
     #codigo;
     #titulo;
-    #descripcion;
+    #descripcion; 
     #imagen;
     #genero;
     #creador;
     #lanzamiento;
     #edad;
-    constructor(codigo = uuidv4(), titulo, description,imagen,genero,creador,lanzamiento,edad){
+
+    constructor(codigo = uuidv4(), titulo, descripcion, imagen, genero, creador, lanzamiento, edad) {
         this.#codigo = codigo;
         this.#titulo = titulo;
-        this.#description = description;
-        this.#imagen= imagen;
+        this.#descripcion = descripcion;
+        this.#imagen = imagen;
         this.#genero = genero;
         this.#creador = creador;
         this.#lanzamiento = lanzamiento;

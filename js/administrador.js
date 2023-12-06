@@ -36,7 +36,7 @@ const añadirJuego = (juegoNuevo) => {
   fila.innerHTML = `
     <th scope="row">${table.rows.length + 1}</th>
     <td>${juegoNuevo.getTitulo()}</td>
-    <td class="text-truncate">${juegoNuevo.getDescripcion()}</td>
+    <td class="text-truncate" style="max-width: 250px;">${juegoNuevo.getDescripcion()}</td>
     <td class="text-center"> <img src=${juegoNuevo.getImagen()} height="150" width="150"></td>
     <td>${juegoNuevo.getGenero()}</td>
     <td>${juegoNuevo.getCreador()}</td>

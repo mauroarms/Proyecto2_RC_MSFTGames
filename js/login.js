@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     const onCloseButtonClick = () => {
-      window.open(location, '_self').close();
+      window.location.href = '../index.html';
     }
   
     document.getElementById('btn_next').addEventListener('click', onNextButtonClick);

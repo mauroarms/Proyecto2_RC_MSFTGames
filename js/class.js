@@ -7,8 +7,9 @@ export default class Juego{
     #creador;
     #lanzamiento;
     #edad;
+    #precio;
 
-    constructor(codigo = uuidv4(), titulo, descripcion, imagen, genero, creador, lanzamiento, edad) {
+    constructor(codigo = uuidv4(), titulo, descripcion, imagen, genero, creador, lanzamiento, edad,precio) {
         this.#codigo = codigo;
         this.#titulo = titulo;
         this.#descripcion = descripcion;
@@ -17,6 +18,7 @@ export default class Juego{
         this.#creador = creador;
         this.#lanzamiento = lanzamiento;
         this.#edad = edad;
+        this.#precio = precio;
     }
 
      getCodigo() {
@@ -50,7 +52,10 @@ export default class Juego{
     getEdad() {
         return this.#edad;
     }
-
+    getPrecio() {
+        return this.#precio;
+    }
+    
 
     setCodigo(codigo) {
         this.#codigo = codigo;
@@ -83,7 +88,9 @@ export default class Juego{
     setEdad(edad) {
         this.#edad = edad;
     }
-
+    setPrecio(precio) {
+        this.#precio = precio;
+    }
     toJSON() {
         return {
             codigo: this.#codigo,
@@ -93,7 +100,8 @@ export default class Juego{
             genero: this.#genero,
             creador: this.#creador,
             lanzamiento: this.#lanzamiento,
-            edad: this.#edad
+            edad: this.#edad,
+            precio: this.#precio
         };
     }
 

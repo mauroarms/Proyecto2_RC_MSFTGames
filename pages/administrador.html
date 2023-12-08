@@ -37,6 +37,7 @@
                   <th scope="col">Creador</th>
                   <th scope="col">Fecha de Lanzamiento</th>
                   <th scope="col">Edad Recomendada</th>
+                  <th scope="col">Precio</th>
                   <th scope="col">Acciones</th>
                 </tr>
               </thead>
@@ -88,7 +89,7 @@
               </div>
               
                 <div class="mb-3">
-                    <label for="titulo" class="form-label">Fecha de Lanzamiento</label>
+                    <label for="lanzamiento" class="form-label">Fecha de Lanzamiento</label>
                     <input type="text" class="form-control" id="lanzamiento" aria-describedby="Fecha de Lanzamiento" required>
                 </div>
 
@@ -103,6 +104,10 @@
                       <option value="18">+ 18 Años</option>
                     </select>
                   </div>
+                  <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="precio" aria-describedby="Precio" required>
+                </div>
                 <button type="submit" id="btnSubmit" class="btn btn-primary" >Enviar</button>
               </form>
         </div>

@@ -13,6 +13,7 @@ const crearJuego = (e) => {
   const creadorDelJuego = document.getElementById("creador").value;
   const lanzamientoDelJuego = document.getElementById("lanzamiento").value;
   const edadRequeridaDelJuego = document.getElementById("selectEdad").value;
+  const precioDelJuego = document.getElementById("precio").value
 
   const juegoNuevo = new Juego(
     undefined,
@@ -22,7 +23,8 @@ const crearJuego = (e) => {
     generoDelJuego,
     creadorDelJuego,
     lanzamientoDelJuego,
-    edadRequeridaDelJuego
+    edadRequeridaDelJuego,
+    precioDelJuego
   );
 
   listaDeJuegos.push(juegoNuevo);
@@ -30,7 +32,7 @@ const crearJuego = (e) => {
   añadirJuego(juegoNuevo);
 };
 
-const añadirJuego = (juegoNuevo) => {
+export const añadirJuego = (juegoNuevo) => {
   const fila = document.createElement("tr");
 
   fila.innerHTML = `
@@ -42,6 +44,7 @@ const añadirJuego = (juegoNuevo) => {
     <td>${juegoNuevo.getCreador()}</td>
     <td>${juegoNuevo.getLanzamiento()}</td>
     <td>${juegoNuevo.getEdad()}</td>
+    <td>$ ${juegoNuevo.getPrecio()}</td>
     <td>
         <div class="d-flex gap-3">
             <button class="btn btn-warning">Editar</button>
@@ -89,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         juego.genero,
         juego.creador,
         juego.lanzamiento,
-        juego.edad
+        juego.edad,
+        juego.precio
       );
 
       listaDeJuegos.push(juegoObj);

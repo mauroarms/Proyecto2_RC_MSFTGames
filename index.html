@@ -22,63 +22,263 @@
         />
         <title>Microsoft Store</title>
         <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
     </head>
     <body>
         <header>
             <nav></nav>
         </header>
-        <main class="container">
-            <section>
-                <h2>Principales Juegos Gratis</h2>
+        <main class="container-fluid">
+            <section class="main row d-flex flex-column flex-sm-row">
                 <div
-                    class="container-fluid d-flex gap-2 justify-content-between align-items-center bg-danger p-0"
+                    class="col px-0 py-5 d-flex flex-column justify-content-between align-items-center gap-3 col-sm-6"
                 >
-                    <div class="card">
-                        <img src="./images/example-game.jpeg" alt="juego" />
-                        <div class="card-body">
-                            <h3 class="card-title">Juego</h3>
+                    <h1 class="main-title display-1 fw-semibold">Titulo</h1>
+                    <p class="text-center px-3 fs-4 px-lg-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Saepe laudantium placeat deleniti architecto omnis
+                        adipisci?
+                    </p>
+                    <a href="#" class="buy-now">Comprar ahora</a>
+                </div>
+                <div
+                    class="col px-0 py-3 d-flex flex-column justify-content-center align-items-center col-sm-6"
+                >
+                    <img
+                        src="./images/ea-sports-fc-logo-3EECE6A9F4-seeklogo.com.png"
+                        alt=""
+                        class="img-fluid"
+                    />
+                </div>
+            </section>
+            <section class="py-4">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
+                >
+                    <h2 class="display-3 text-center fw-medium">
+                        Principales Juegos
+                    </h2>
+                    <a href="#" class="fs-6 align-self-end">
+                        Mostrar todo<i
+                            class="bi bi-arrow-right text-primary"
+                        ></i>
+                    </a>
+                </div>
+                <div class="container-lg swiper my-4">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="./images/example-game.jpeg" alt="juego" />
-                        <div class="card-body">
-                            <h3 class="card-title">Juego</h3>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="./images/example-game.jpeg" alt="juego" />
-                        <div class="card-body">
-                            <h3 class="card-title">Juego</h3>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="./images/example-game.jpeg" alt="juego" />
-                        <div class="card-body">
-                            <h3 class="card-title">Juego</h3>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!--  <section>
-                <h2>Principales Juegos de Pago</h2>
+            <hr />
+            <section class="py-4">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
+                >
+                    <h2 class="display-4 text-center fw-medium">
+                        Tendencias en Juegos
+                    </h2>
+                    <a href="#" class="fs-6 align-self-end">
+                        Mostrar todo<i
+                            class="bi bi-arrow-right text-primary"
+                        ></i>
+                    </a>
+                </div>
+                <div class="container-lg swiper my-4">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column">
+                            <img src="./images/example-game.jpeg" alt="" />
+                            <div class="card-body">
+                                <h3 class="card-title py-3 text-center">
+                                    juego
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
-                <h2>Juegos mejor valorados</h2>
+            <hr />
+            <section class="py-4">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
+                >
+                    <h2 class="display-4 text-center fw-medium">Categorias</h2>
+                    <a href="#" class="fs-6 align-self-end">
+                        Mostrar todo<i
+                            class="bi bi-arrow-right text-primary"
+                        ></i>
+                    </a>
+                </div>
+                <div
+                    class="categorias my-4 d-flex align-items-center justify-content-center flex-wrap gap-3 flex-column justify-content-sm-start align-content-sm-around"
+                >
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                    <div>
+                        <a href="#">categoria</a>
+                    </div>
+                </div>
             </section>
-            <section>
-                <h2>Tendencias en juegos</h2>
-            </section>
-            <section>
-                <h2>Categorias</h2>
-            </section> -->
         </main>
         <footer></footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

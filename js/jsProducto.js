@@ -6,7 +6,7 @@ tabs.forEach((tab, index) => {
         tabs.forEach(tab=>{tab.classList.remove('active')});
         tab.classList.add('active');
 
-        var line=document.querySelector('.line');
+        let line=document.querySelector('.line');
         line.style.width = e.target.offsetWidth + "px";
         line.style.left = e.target.offsetLeft + "px";
 

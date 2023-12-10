@@ -27,7 +27,8 @@ const crearJuego = (e) => {
 
   listaDeJuegos.push(juegoNuevo);
   guardarLocalStorage();
-  añadirJuego(juegoNuevo);
+  renderizarTabla();
+  formularioDeJuegos.reset();
 };
 
 const añadirJuego = (juegoNuevo) => {
@@ -44,17 +45,21 @@ const añadirJuego = (juegoNuevo) => {
     <td>${juegoNuevo.getEdad()}</td>
     <td>
         <div class="d-flex gap-3">
-            <button class="btn btn-warning">Editar</button>
-            <button class="btn btn-danger btnEliminar">Borrar</button>
+            <button class="btn btn-warning btnEditar" data-codigo="${juegoNuevo.getCodigo()}">Editar</button>
+            <button class="btn btn-danger btnEliminar" data-codigo="${juegoNuevo.getCodigo()}">Borrar</button>
         </div>
     </td>
   `;
 
-  
   table.appendChild(fila);
+
   const btnEliminar = fila.querySelector(".btnEliminar");
   btnEliminar.addEventListener("click", () => eliminarJuego(juegoNuevo.getCodigo()));
-  formularioDeJuegos.reset()
+
+  const btnEditar = fila.querySelector(".btnEditar");
+  btnEditar.addEventListener("click", () => editarJuego(juegoNuevo.getCodigo()));
+
+  
 };
 
 const guardarLocalStorage = () => {
@@ -62,40 +67,94 @@ const guardarLocalStorage = () => {
 };
 
 const eliminarJuego = (codigo) => {
-    listaDeJuegos = listaDeJuegos.filter((juego) => juego.getCodigo() !== codigo);
-    guardarLocalStorage();
-    renderizarTabla();
-}
+  listaDeJuegos = listaDeJuegos.filter((juego) => juego.getCodigo() !== codigo);
+  guardarLocalStorage();
+  renderizarTabla();
+};
 
 const renderizarTabla = () => {
-    table.innerHTML = "";
+  table.innerHTML = "";
 
-    listaDeJuegos.forEach((juego) => {
-      añadirJuego(juego);
-    });
-  };
+  listaDeJuegos.forEach((juego) => {
+    añadirJuego(juego);
+  });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const datosGuardados = localStorage.getItem("listado");
 
   if (datosGuardados) {
     const juegosGuardados = JSON.parse(datosGuardados);
-    juegosGuardados.forEach((juego) => {
-      const juegoObj = new Juego(
-        undefined,
-        juego.titulo,
-        juego.descripcion,
-        juego.imagen,
-        juego.genero,
-        juego.creador,
-        juego.lanzamiento,
-        juego.edad
-      );
-
-      listaDeJuegos.push(juegoObj);
-      añadirJuego(juegoObj);
-    });
+    listaDeJuegos = juegosGuardados.map(
+      (juego) =>
+        new Juego(
+          juego.codigo,
+          juego.titulo,
+          juego.descripcion,
+          juego.imagen,
+          juego.genero,
+          juego.creador,
+          juego.lanzamiento,
+          juego.edad
+        )
+    );
+    renderizarTabla();
   }
 });
+
+const editarJuego = (codigo) => {
+  const juegoEditar = listaDeJuegos.find((juego) => juego.getCodigo() === codigo);
+
+  if (juegoEditar) {
+
+    document.getElementById("codigo").value = juegoEditar.getCodigo();
+    document.getElementById("titulo").value = juegoEditar.getTitulo();
+    document.getElementById("descripcion").value = juegoEditar.getDescripcion();
+    document.getElementById("imagen").value = juegoEditar.getImagen();
+    document.getElementById("selectGenero").value = juegoEditar.getGenero();
+    document.getElementById("creador").value = juegoEditar.getCreador();
+    document.getElementById("lanzamiento").value = juegoEditar.getLanzamiento();
+    document.getElementById("selectEdad").value = juegoEditar.getEdad();
+
+
+    formularioDeJuegos.removeEventListener("submit", crearJuego);
+    formularioDeJuegos.addEventListener("submit", () => {
+      actualizarJuego(juegoEditar.getCodigo());
+    });
+
+l
+    const modal = new bootstrap.Modal(document.getElementById("modalJuego"));
+    modal.show();
+  }
+};
+
+const actualizarJuego = (codigo) => {
+  const juegoEditar = listaDeJuegos.find((juego) => juego.getCodigo() === codigo);
+
+  if (juegoEditar) {
+
+    juegoEditar.setTitulo(document.getElementById("titulo").value);
+    juegoEditar.setDescripcion(document.getElementById("descripcion").value);
+    juegoEditar.setImagen(document.getElementById("imagen").value);
+    juegoEditar.setGenero(document.getElementById("selectGenero").value);
+    juegoEditar.setCreador(document.getElementById("creador").value);
+    juegoEditar.setLanzamiento(document.getElementById("lanzamiento").value);
+    juegoEditar.setEdad(document.getElementById("selectEdad").value);
+
+
+    guardarLocalStorage();
+    renderizarTabla();
+
+
+    formularioDeJuegos.removeEventListener("submit", () => {
+      actualizarJuego(juegoEditar.getCodigo());
+    });
+    formularioDeJuegos.addEventListener("submit", crearJuego);
+
+
+    document.getElementById("codigo").value = "";
+    modal.hide();
+  }
+};
 
 formularioDeJuegos.addEventListener("submit", crearJuego);

@@ -27,7 +27,7 @@ const renderJuegos = () => {
     const contenedor = document.querySelector(".swiper-wrapper");
     juegos.map((juego) => {
         contenedor.innerHTML += `<div class="swiper-slide flex-column">
-        <a href="" class="game">
+        <a href="${window.location.origin}/pages/detalleProducto.html?codigo=${juego.codigo}" class="game" class="juego">
         <img src="${juego.imagen}" alt="${juego.descripcion}" />
         <div class="card-body">
             <h3 class="card-title py-3 text-center">
@@ -50,7 +50,7 @@ const searchJuego = () => {
     );
     console.log(juego);
     card.innerHTML = `<div class="card">
-    <a href="" class="game">
+    <a href="${window.location.origin}/pages/detalleProducto.html?codigo=${juego.codigo}" class="game">
     <img src="${juego.imagen}" alt="${juego.descripcion}" class="img-fluid"/>
     <div class="card-body">
         <h3 class="card-title py-3 text-center">

@@ -15,6 +15,7 @@ const validarNombre = (nombre) => {
     return "El nombre debe tener entre 3 y 50 caracteres.";
   }
 
+  return "Se valido sin errores"
 }
 
 const validarDescripcion = (descripcion) => {
@@ -22,11 +23,32 @@ const validarDescripcion = (descripcion) => {
     return "El campo de descripción es obligatorio.";
   }
 
-  // Longitud mínima y máxima para la descripción (puedes ajustar estos valores)
   if (descripcion.length < 10 || descripcion.length > 500) {
     return "La descripción debe tener entre 10 y 500 caracteres.";
   }
+  return "Se valido sin errores"
 }
+
+const validarGenero = (genero) => {
+  if (!genero) {
+    return "El campo de género es obligatorio.";
+  }
+  return "Se valido sin errores"
+};
+
+const validarCreador = (creador) => {
+  if (!creador) {
+    return "El campo de creador es obligatorio.";
+  }
+
+
+  if (creador.length < 3 || creador.length > 50) {
+    return "El nombre del creador debe tener entre 3 y 50 caracteres.";
+  }
+
+  return "Se valido sin errores"
+};
+
 
 const crearJuego = (e) => {
   e.preventDefault();

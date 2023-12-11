@@ -1,12 +1,12 @@
 const getSize = () => {
     if (screen.width <= 350) {
         return 1;
-    } else if (screen.width <= 750 && screen.width > 350) {
+    } else if (screen.width <= 750 && screen.width > 500) {
         return 2;
     } else if (screen.width <= 990 && screen.width > 750) {
-        return 4;
+        return 3;
     } else {
-        return 5;
+        return 4;
     }
 };
 
@@ -27,12 +27,14 @@ const renderJuegos = () => {
     const contenedor = document.querySelector(".swiper-wrapper");
     juegos.map((juego) => {
         contenedor.innerHTML += `<div class="swiper-slide flex-column">
+        <a href="" class="game">
         <img src="${juego.imagen}" alt="${juego.descripcion}" />
         <div class="card-body">
             <h3 class="card-title py-3 text-center">
-                <a href="" class="game">${juego.titulo}</a>    
+                ${juego.titulo}    
             </h3>
         </div>
+        </a>
     </div>`;
     });
 };
@@ -48,11 +50,13 @@ const searchJuego = () => {
     );
     console.log(juego);
     card.innerHTML = `<div class="card">
+    <a href="" class="game">
     <img src="${juego.imagen}" alt="${juego.descripcion}" class="img-fluid"/>
     <div class="card-body">
         <h3 class="card-title py-3 text-center">
-            <a href="" class="game">${juego.titulo}</a>    
+            ${juego.titulo}    
         </h3>
     </div>
+    </a>
 </div>`;
 };

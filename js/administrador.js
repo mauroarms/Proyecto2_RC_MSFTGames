@@ -15,7 +15,7 @@ const validarNombre = (nombre) => {
     return "El nombre debe tener entre 3 y 50 caracteres.";
   }
 
-  return "Se valido sin errores"
+  return "Nombre se valido sin errores"
 }
 
 const validarDescripcion = (descripcion) => {
@@ -26,14 +26,23 @@ const validarDescripcion = (descripcion) => {
   if (descripcion.length < 10 || descripcion.length > 500) {
     return "La descripción debe tener entre 10 y 500 caracteres.";
   }
-  return "Se valido sin errores"
+  return "Descripcion se valido sin errores"
 }
+
+const validarImagen = (imagen) => {
+  if (!imagen) {
+    return "El campo de imagen es obligatorio.";
+  }
+
+// Hacer validacion con regex
+return "Imagen se valido sin errores"
+};
 
 const validarGenero = (genero) => {
   if (!genero) {
     return "El campo de género es obligatorio.";
   }
-  return "Se valido sin errores"
+  return "Genero se valido sin errores"
 };
 
 const validarCreador = (creador) => {
@@ -46,9 +55,34 @@ const validarCreador = (creador) => {
     return "El nombre del creador debe tener entre 3 y 50 caracteres.";
   }
 
-  return "Se valido sin errores"
+  return "Creador se valido sin errores"
 };
 
+const validarLanzamiento = (lanzamiento) => {
+  const fechaLanzamientoRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!fechaLanzamientoRegex.test(lanzamiento)) {
+    return "Formato de fecha de lanzamiento no válido. Utiliza el formato YYYY-MM-DD.";
+  }
+
+  return "Lanzamiento valido sin errores"
+};
+
+const validarEdadRequerida = (edad) => {
+  if (!edad) {
+    return "El campo de edad requerida es obligatorio.";
+  }
+
+
+  return "Edad se valido sin errores"
+};
+const validarPrecio = (precio) => {
+  if (!precio) {
+    return "El campo de precio es obligatorio.";
+  }
+
+
+  return "Precio se valido sin errores"
+};
 
 const crearJuego = (e) => {
   e.preventDefault();
@@ -60,6 +94,23 @@ const crearJuego = (e) => {
   const lanzamientoDelJuego = document.getElementById("lanzamiento").value;
   const edadRequeridaDelJuego = document.getElementById("selectEdad").value;
   const precioDelJuego = document.getElementById("precio").value
+
+
+  const errorNombre = validarNombre(nombreJuego);
+  const errorDescripcion = validarDescripcion(descripcionDelJuego);
+  const errorImagen = validarImagen(imagenDelJuego);
+  const errorGenero = validarGenero(generoDelJuego);
+  const errorCreador = validarCreador(creadorDelJuego);
+  const errorLanzamiento = validarLanzamiento(lanzamientoDelJuego);
+  const errorEdadRequerida = validarEdadRequerida(edadRequeridaDelJuego);
+  const errorPrecio = validarPrecio(precioDelJuego);
+
+
+  if (errorNombre || errorDescripcion || errorImagen || errorGenero || errorCreador || errorLanzamiento || errorEdadRequerida) {
+
+    console.error("Error en la validación:", errorNombre, errorDescripcion, errorImagen, errorGenero, errorCreador, errorLanzamiento, errorEdadRequerida, errorPrecio);
+    return;
+  }
 
   const juegoNuevo = new Juego(
     undefined,

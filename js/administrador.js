@@ -5,7 +5,14 @@ const formularioDeJuegos = document.querySelector("#formAdministrarJuego");
 const table = document.querySelector(".table tbody");
 
 // Validaciones
+const validarNombre = (nombre) => {
+  if (!nombre) {
+    return "El campo de nombre es obligatorio.";
+  }
 
+  if (nombre.length < 3 || nombre.length > 50) {
+    return "El nombre debe tener entre 3 y 50 caracteres.";
+  }
 
 const crearJuego = (e) => {
   e.preventDefault();

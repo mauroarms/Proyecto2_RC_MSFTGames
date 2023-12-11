@@ -10,9 +10,23 @@ const validarNombre = (nombre) => {
     return "El campo de nombre es obligatorio.";
   }
 
+
   if (nombre.length < 3 || nombre.length > 50) {
     return "El nombre debe tener entre 3 y 50 caracteres.";
   }
+
+}
+
+const validarDescripcion = (descripcion) => {
+  if (!descripcion) {
+    return "El campo de descripción es obligatorio.";
+  }
+
+  // Longitud mínima y máxima para la descripción (puedes ajustar estos valores)
+  if (descripcion.length < 10 || descripcion.length > 500) {
+    return "La descripción debe tener entre 10 y 500 caracteres.";
+  }
+}
 
 const crearJuego = (e) => {
   e.preventDefault();

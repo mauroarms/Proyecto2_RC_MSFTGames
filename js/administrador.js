@@ -4,6 +4,9 @@ let listaDeJuegos = [];
 const formularioDeJuegos = document.querySelector("#formAdministrarJuego");
 const table = document.querySelector(".table tbody");
 
+// Validaciones
+
+
 const crearJuego = (e) => {
   e.preventDefault();
   const nombreJuego = document.getElementById("titulo").value;

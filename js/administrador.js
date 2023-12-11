@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
           juego.genero,
           juego.creador,
           juego.lanzamiento,
-          juego.edad
+          juego.edad,
+          juego.precio
         )
     );
     renderizarTabla();
@@ -118,6 +119,7 @@ const editarJuego = (codigo) => {
     document.getElementById("creador").value = juegoEditar.getCreador();
     document.getElementById("lanzamiento").value = juegoEditar.getLanzamiento();
     document.getElementById("selectEdad").value = juegoEditar.getEdad();
+    document.getElementById("precio").value = juegoEditar.getPrecio();
 
 
     formularioDeJuegos.removeEventListener("submit", crearJuego);
@@ -125,7 +127,6 @@ const editarJuego = (codigo) => {
       actualizarJuego(juegoEditar.getCodigo());
     });
 
-l
     const modal = new bootstrap.Modal(document.getElementById("modalJuego"));
     modal.show();
   }
@@ -143,6 +144,7 @@ const actualizarJuego = (codigo) => {
     juegoEditar.setCreador(document.getElementById("creador").value);
     juegoEditar.setLanzamiento(document.getElementById("lanzamiento").value);
     juegoEditar.setEdad(document.getElementById("selectEdad").value);
+    juegoEditar.setPrecio(document.getElementById("precio").value)
 
 
     guardarLocalStorage();

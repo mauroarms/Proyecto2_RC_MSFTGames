@@ -1,0 +1,17 @@
+.imgContainer{
+    display: none;
+}
+
+.seccionAdministrador{
+    text-align: center;
+}
+
+@media (min-width: 991.98px){
+    .imgContainer{
+        display: block;
+    }
+    .seccionAdministrador{
+        text-align: start;
+    }
+    
+}

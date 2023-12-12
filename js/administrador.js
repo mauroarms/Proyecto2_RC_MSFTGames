@@ -202,12 +202,13 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarTabla();
   }
 
-  const rolActive = localStorage.getItem('rolActive');
+  const adminLoggedIn = localStorage.getItem('adminLogged') === 'true';
+  const invitadoLoggedIn = localStorage.getItem('invitadoLogged') === 'true';
 
-  if (rolActive !== 'admin') {
-    window.location.href = './access-denied.html';
+  if (!adminLoggedIn) {
+    window.location.href = '../pages/accesoDenegado.html';
   } else {
-    window.location.href = "../pages/administrador.html"
+    return;
   }
 });
 

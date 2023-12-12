@@ -1,3 +1,5 @@
+import {usuario} from './class.js'
+
 document.addEventListener("DOMContentLoaded", () => {
   const usernameRequired =
     "Ingrese una dirección de correo electrónico válida, número de teléfono o nombre de Skype.";
@@ -77,34 +79,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const onSignInButtonClick = () => {
     if (view === "password") {
       validatePassword();
+  
       if (isPasswordValid) {
         const username = usernameInput.value;
-        const password = passwordInput.value;
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const storedUserData = JSON.parse(localStorage.getItem(localStorage.key(i)));
   
-        const adminUserData = JSON.parse(localStorage.getItem("admin"));
-        const guestUserData = JSON.parse(localStorage.getItem("invitado"));
+          if (storedUserData && storedUserData.email === username && storedUserData.contraseña === passwordInput.value) {
+            const storedUser = new usuario(
+              storedUserData.email,
+              storedUserData.contraseña,
+              storedUserData.rol
+            );
   
-        if (
-          adminUserData &&
-          username === adminUserData.email &&
-          password === adminUserData.password
-        ) {
-          if (adminUserData.role === "admin") {
-            window.location.href = "../pages/administrador.html";
-          } else {
-            window.location.href = "../index.html";
+            if (storedUser.getRol() === "admin") {
+              localStorage.setItem('adminLogged', 'true');
+              window.location.href = "../pages/administrador.html";
+            } else if (storedUser.getRol() === "invitado") {
+              localStorage.setItem('invitadoLogged', 'true');
+              window.location.href = "../index.html";
+            }
+  
+            return;
           }
-        } else if (
-          guestUserData &&
-          username === guestUserData.email &&
-          password === guestUserData.password
-        ) {
-          if (guestUserData.role === "invitado") {
-            window.location.href = "../index.html";
-          }
-        } else {
-          alert("Credenciales incorrectas");
         }
+  
+        displayErrorMessage(
+          document.getElementById("error_password"),
+          userNotExist,
+          passwordInput
+        );
       }
     }
   };

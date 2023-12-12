@@ -1,212 +1,412 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones ."
-    />
-    <meta
-      name="keywords"
-      content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, "
-    />
-    <meta
-      name="author"
-      content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
-    />
-    <meta
-      name="copyright"
-      content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
-    />
-    <title>Acerca de nosotros</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="../css/sobreNosotros.css" />
-  </head>
-  <body>
-    <main>
-      <section>
-        <article>
-          <div class="featured-article">
-            <div class="container">
-              <div class="banner">
-                <h1 class="display-3">SOBRE NOSOTROS</h1>
-                <div class="banner-paragraph">
-                  <p>
-                    En Microsoft, nuestro equipo es más que un conjunto de
-                    mentes brillantes; somos una sinfonía de innovación, pasión
-                    y colaboración. Cada uno de nosotros es una pieza vital en
-                    la creación de tecnología que transforma el mundo. Guiados
-                    por la curiosidad y la determinación, enfrentamos desafíos
-                    con audacia, aprendiendo y creciendo juntos en el proceso.
-                    Nuestra diversidad es nuestro superpoder, fusionando
-                    perspectivas únicas para impulsar soluciones que impactan
-                    vidas. Somos más que un equipo; somos una familia unida por
-                    el propósito de empoderar a todos, en todas partes, a través
-                    de la magia de la tecnología.
-                  </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones ."
+        />
+        <meta
+            name="keywords"
+            content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, "
+        />
+        <meta
+            name="author"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <meta
+            name="copyright"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <title>Acerca de nosotros</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="../css/sobreNosotros.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img
+                            src="../assets/img/logoMicrosoft.jpg"
+                            alt="logoNavbar"
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="./pages/error404.html"
+                                    >Xbox</a
+                                >
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Software
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Action</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Another action</a
+                                        >
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Juegos y entretenimiento
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Action</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Another action</a
+                                        >
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Todo Microsoft
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Action</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Another action</a
+                                        >
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="./pages/sobreNosotros.html"
+                                    >Nosotros</a
+                                >
+                            </li>
+                            <div
+                                class="mt-2 mt-lg-0 d-flex gap-4 gap-lg-3 px-lg-2"
+                            >
+                                <a
+                                    class="nav-link navText"
+                                    href="./pages/cart.html"
+                                    ><i class="bi bi-search"></i
+                                ></a>
+                                <a
+                                    class="nav-link navText"
+                                    href="./pages/cart.html"
+                                    ><i class="bi bi-cart2"></i
+                                ></a>
+                                <a
+                                    class="nav-link navText"
+                                    href="./pages/cart.html"
+                                    ><i class="bi bi-person-circle"></i
+                                ></a>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="article-about">
-          <div class="container">
-            <div class="text-center pt-5 about-font about-font">
-              <h2 class="about-font">Integrantes del proyecto</h2>
-              <h3 class="about-font">Grupo 4</h3>
-            </div>
-            <div class="row justify-content-center py-5 about-font">
-              <div class="col-lg-4 col-md-6 col-sm-12 team-card mb-4">
-                <div class="card bg-light about-font">
-                  <img
-                    src="../img/mauro.jpg"
-                    class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
-                    alt="Mauro Nahuel Armas"
-                  />
-                  <div class="card-body bg-light">
-                    <h5 class="card-text about-font">
-                      <b>Mauro Nahuel Armas</b>
-                    </h5>
-                    <p class="card-title card-subtitle">
-                      Estudiante de Programación
-                    </p>
-                    <p class="card-text card-subtitle">Scrum Master</p>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-github fs-3"></i
-                    ></a>
-                    &nbsp;
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-linkedin fs-3"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 team-card mb-4">
-                <div class="card bg-light about-font">
-                  <img
-                    src="../img/joaquin.jpg"
-                    class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
-                    alt="Joaquin Medina"
-                  />
-                  <div class="card-body bg-light">
-                    <h5 class="card-text about-font"><b>Joaquin Medina</b></h5>
-                    <p class="card-title card-subtitle">
-                      Estudiante de Programación
-                    </p>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-github fs-3"></i></a
-                    >&nbsp;
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-linkedin fs-3"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 team-card mb-4">
-                <div class="card bg-light about-font">
-                  <img
-                    src="../img/lucia.jpg"
-                    class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
-                    alt="Maria Lucia Barraza"
-                  />
-                  <div class="card-body bg-light">
-                    <h5 class="card-text about-font">
-                      <b>Maria Lucia Barraza</b>
-                    </h5>
-                    <p class="card-title card-subtitle">
-                      Estudiante de Programación
-                    </p>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-github fs-3"></i></a
-                    >&nbsp;
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-linkedin fs-3"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 team-card mb-4">
-                <div class="card bg-light about-font">
-                  <img
-                    src="../img/luciano.png"
-                    class="card-img-top img-fluid team-member-img h-40 mx-auto mt-4 rounded-circle"
-                    alt="Luciano Antonio Cabello"
-                  />
-                  <div class="card-body bg-light">
-                    <h5 class="card-text about-font">
-                      <b>Luciano Antonio Cabello</b>
-                    </h5>
-                    <p class="card-title card-subtitle">
-                      Estudiante de Programación
-                    </p>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-github fs-3"></i></a
-                    >&nbsp;
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-linkedin fs-3"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 team-card mb-4">
-                <div class="card bg-light about-font">
-                  <img
-                    src="../img/nicolas.jpg"
-                    class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
-                    alt="Nicolas Saavedra"
-                  />
-                  <div class="card-body bg-light">
-                    <h5 class="card-text about-font">
-                      <b>Nicolás Saavedra</b>
-                    </h5>
-                    <p class="card-title card-subtitle">
-                      Estudiante de Programación
-                    </p>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-github fs-3"></i></a
-                    >&nbsp;
-                    <a href="./error404.html" class="card-subtitle"
-                      ><i class="bi bi-linkedin fs-3"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <div class="featured-article">
+                        <div class="container">
+                            <div class="banner">
+                                <h1 class="display-3">SOBRE NOSOTROS</h1>
+                                <div class="banner-paragraph">
+                                    <p>
+                                        En Microsoft, nuestro equipo es más que
+                                        un conjunto de mentes brillantes; somos
+                                        una sinfonía de innovación, pasión y
+                                        colaboración. Cada uno de nosotros es
+                                        una pieza vital en la creación de
+                                        tecnología que transforma el mundo.
+                                        Guiados por la curiosidad y la
+                                        determinación, enfrentamos desafíos con
+                                        audacia, aprendiendo y creciendo juntos
+                                        en el proceso. Nuestra diversidad es
+                                        nuestro superpoder, fusionando
+                                        perspectivas únicas para impulsar
+                                        soluciones que impactan vidas. Somos más
+                                        que un equipo; somos una familia unida
+                                        por el propósito de empoderar a todos,
+                                        en todas partes, a través de la magia de
+                                        la tecnología.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article-about">
+                    <div class="container">
+                        <div class="text-center pt-5 about-font about-font">
+                            <h2 class="about-font">Integrantes del proyecto</h2>
+                            <h3 class="about-font">Grupo 4</h3>
+                        </div>
+                        <div class="row justify-content-center py-5 about-font">
+                            <div
+                                class="col-lg-4 col-md-6 col-sm-12 team-card mb-4"
+                            >
+                                <div class="card bg-light about-font">
+                                    <img
+                                        src="../assets/img/mauro.jpg"
+                                        class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
+                                        alt="Mauro Nahuel Armas"
+                                    />
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-text about-font">
+                                            <b>Mauro Nahuel Armas</b>
+                                        </h5>
+                                        <p class="card-title card-subtitle">
+                                            Estudiante de Programación
+                                        </p>
+                                        <p class="card-text card-subtitle">
+                                            Scrum Master
+                                        </p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-github fs-3"></i
+                                        ></a>
+                                        &nbsp;
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-linkedin fs-3"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-4 col-md-6 col-sm-12 team-card mb-4"
+                            >
+                                <div class="card bg-light about-font">
+                                    <img
+                                        src="../assets/img/joaquin.jpg"
+                                        class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
+                                        alt="Joaquin Medina"
+                                    />
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-text about-font">
+                                            <b>Joaquin Medina</b>
+                                        </h5>
+                                        <p class="card-title card-subtitle">
+                                            Estudiante de Programación
+                                        </p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i
+                                                class="bi bi-github fs-3"
+                                            ></i></a
+                                        >&nbsp;
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-linkedin fs-3"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-4 col-md-6 col-sm-12 team-card mb-4"
+                            >
+                                <div class="card bg-light about-font">
+                                    <img
+                                        src="../assets/img/lucia.jpg"
+                                        class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
+                                        alt="Maria Lucia Barraza"
+                                    />
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-text about-font">
+                                            <b>Maria Lucia Barraza</b>
+                                        </h5>
+                                        <p class="card-title card-subtitle">
+                                            Estudiante de Programación
+                                        </p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i
+                                                class="bi bi-github fs-3"
+                                            ></i></a
+                                        >&nbsp;
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-linkedin fs-3"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-4 col-md-6 col-sm-12 team-card mb-4"
+                            >
+                                <div class="card bg-light about-font">
+                                    <img
+                                        src="../assets/img/luciano.png"
+                                        class="card-img-top img-fluid team-member-img h-40 mx-auto mt-4 rounded-circle"
+                                        alt="Luciano Antonio Cabello"
+                                    />
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-text about-font">
+                                            <b>Luciano Antonio Cabello</b>
+                                        </h5>
+                                        <p class="card-title card-subtitle">
+                                            Estudiante de Programación
+                                        </p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i
+                                                class="bi bi-github fs-3"
+                                            ></i></a
+                                        >&nbsp;
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-linkedin fs-3"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-4 col-md-6 col-sm-12 team-card mb-4"
+                            >
+                                <div class="card bg-light about-font">
+                                    <img
+                                        src="../assets/img/nicolas.jpg"
+                                        class="card-img-top img-fluid team-member-img mx-auto mt-4 rounded-circle"
+                                        alt="Nicolas Saavedra"
+                                    />
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-text about-font">
+                                            <b>Nicolás Saavedra</b>
+                                        </h5>
+                                        <p class="card-title card-subtitle">
+                                            Estudiante de Programación
+                                        </p>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i
+                                                class="bi bi-github fs-3"
+                                            ></i></a
+                                        >&nbsp;
+                                        <a
+                                            href="./error404.html"
+                                            class="card-subtitle"
+                                            ><i class="bi bi-linkedin fs-3"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

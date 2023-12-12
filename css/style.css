@@ -1,7 +1,9 @@
 :root{
     --grisContenedores: #151517;
     --grisFondo: #1a1b1e;
-    --fuenteTitulo: bahn
+    --fuenteTitulo: bahn;
+    --blue: rgb(0, 103, 184);
+    --black: #171617;
 }
 html {
     scroll-behavior: smooth;
@@ -13,6 +15,7 @@ html {
 }
 body{
     background-color: var(--grisFondo);
+    font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 header{
     background-color: var(--grisContenedores);
@@ -110,17 +113,6 @@ header h1{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .categoria{
     position: relative;
     z-index: 1;
@@ -143,4 +135,89 @@ hr{
 }
 .esrbRate a:hover{
     background-color: #909296;
+}
+
+.img {
+    height: auto;
+    width: 100%;
+    object-fit: fill;
+}
+.swiper {
+    padding: 20px 5px;
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.swiper-slide img {
+    height: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
+#categorias {
+    background-color: var(--blue);
+}
+
+.category {
+    &:hover .overlay {
+        opacity: 1;
+    }
+    &:hover img {
+        opacity: 0.4;
+    }
+    position: relative;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.category img {
+    max-height: 250px;
+}
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.overlay a {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.main {
+    background-color: var(--black);
+}
+.main-title {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+a.buy-now {
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: #04e662;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: #02ff6b;
+    }
+}
+
+a.game {
+    color: #7b7979;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        color: #000;
+    }
 }

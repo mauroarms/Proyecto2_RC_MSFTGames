@@ -22,10 +22,14 @@ const swiper = new Swiper(".swiper", {
         clickable: true,
     },
 });
+
 const juegos = JSON.parse(localStorage.getItem("listado"));
 const renderJuegos = () => {
     const contenedor = document.querySelector(".swiper-wrapper");
-    juegos.map((juego) => {
+    if (!juegos.length) {
+        contenedor.innerHTML = `<h2 class="display-3 text-center mx-auto">No hay juegos guardados</h2>`;
+    }
+    juegos?.map((juego) => {
         contenedor.innerHTML += `<div class="swiper-slide flex-column">
         <a href="${window.location.origin}/pages/detalleProducto.html?codigo=${juego.codigo}" class="game" class="juego">
         <img src="${juego.imagen}" alt="${juego.descripcion}" />

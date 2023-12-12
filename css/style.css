@@ -1,4 +1,4 @@
-:root{
+:root {
     --grisContenedores: #151517;
     --grisFondo: #1a1b1e;
     --fuenteTitulo: bahn;
@@ -9,131 +9,127 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
 }
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-body{
+body {
     background-color: var(--grisFondo);
-    font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
 }
-header{
+header {
     background-color: var(--grisContenedores);
     padding: 4px;
     height: 54px;
     position: relative;
     z-index: 1;
 }
-header h1{
+header h1 {
     color: #f1f8ff;
     font-size: 30px;
 }
 
-
-.banner{
+.banner {
     position: relative;
 }
-.imgBanner{
+.imgBanner {
     z-index: -1;
     left: 0;
     width: 100%;
 }
 
-.imgBanner img{
+.imgBanner img {
     filter: blur(15px);
     z-index: 1;
     height: 448px;
     width: 100%;
-    
 }
-.cont-banner{
+.cont-banner {
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,.65);
-    display: flex;  
-    flex-direction: column; 
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 453px;
 }
 
-.tituloProducto{
+.tituloProducto {
     display: flex;
-
 }
-.contTitProduct h2{
-    font-family:'Bahnschrift Light';
+.contTitProduct h2 {
+    font-family: "Bahnschrift Light";
     font-size: 40px;
     color: #f1f8ff;
 }
-.contTitProduct p{
-    font-family:'Bahnschrift';
+.contTitProduct p {
+    font-family: "Bahnschrift";
     font-size: 20px;
     color: #b6bcc0;
 }
-.contTitProduct p strong{
-    font-family:'Bahnschrift';
+.contTitProduct p strong {
+    font-family: "Bahnschrift";
     font-size: 25px;
     color: #f1f8ff;
 }
-.contTitProduct p i{
+.contTitProduct p i {
     margin: 10px 2px;
 }
-.botonesProducto{
+.botonesProducto {
     margin: 34px 0;
     display: flex;
 }
-.btnPersonalizado{
+.btnPersonalizado {
     padding: 0px 18px;
     text-align: left;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     border-radius: 4px;
     background-color: #008746;
 }
-.btnPersonalizado span{
+.btnPersonalizado span {
     background-color: #f1f8ff;
     color: #008746;
     font-size: 10px;
-    margin-left: 5px; 
+    margin-left: 5px;
 }
-.btnSecundarios{
-    background-color: #484E58;
-    border-color: #484E58;
+.btnSecundarios {
+    background-color: #484e58;
+    border-color: #484e58;
     /* padding: 0 30px; */
     min-width: 62px;
     margin-right: 20px;
 }
 
-.botonesProducto p{
+.botonesProducto p {
     color: #f1f8ff;
     padding: 10px;
-    
 }
 
-
-.categoria{
+.categoria {
     position: relative;
     z-index: 1;
     background-color: var(--grisContenedores);
     color: #f1f8ff;
 }
-.esrbRate{
+.esrbRate {
     display: flex;
 }
-hr{
+hr {
     width: 100px;
-    border-width: 3px;  
+    border-width: 3px;
 }
-.esrbRate a{
+.esrbRate a {
     text-decoration: none;
     color: #f1f8ff;
-    background-color: #484E58;
+    background-color: #484e58;
     padding: 3.5px;
     border-radius: 5px;
 }
-.esrbRate a:hover{
+.esrbRate a:hover {
     background-color: #909296;
 }
 
@@ -202,14 +198,14 @@ hr{
 a.buy-now {
     padding: 15px 25px;
     border-radius: 30px;
-    background-color: #04e662;
+    background-color: #05d65c;
     color: #000;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
     transition: all 0.5s ease;
     &:hover {
-        background-color: #02ff6b;
+        background-color: #00ff6a;
     }
 }
 

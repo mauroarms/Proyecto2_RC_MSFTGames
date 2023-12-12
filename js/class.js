@@ -128,9 +128,9 @@ export class usuario {
     }
 
     setEmail(email){
-        this.email = email
+        this.#email = email
     }
-    setConstraseña(contraseña){
+    setContraseña(contraseña){
         this.#contraseña = contraseña
     }
     setRol(rol){

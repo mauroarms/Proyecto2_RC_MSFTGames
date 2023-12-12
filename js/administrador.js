@@ -201,6 +201,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     renderizarTabla();
   }
+
+  const rolActive = localStorage.getItem('rolActive');
+
+  if (rolActive !== 'admin') {
+    window.location.href = './access-denied.html';
+  } else {
+    window.location.href = "../pages/administrador.html"
+  }
 });
 
 const editarJuego = (codigo) => {

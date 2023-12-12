@@ -201,6 +201,15 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     renderizarTabla();
   }
+
+  const adminLoggedIn = localStorage.getItem('adminLogged') === 'true';
+  const invitadoLoggedIn = localStorage.getItem('invitadoLogged') === 'true';
+
+  if (!adminLoggedIn) {
+    window.location.href = '../pages/accesoDenegado.html';
+  } else {
+    return;
+  }
 });
 
 const editarJuego = (codigo) => {

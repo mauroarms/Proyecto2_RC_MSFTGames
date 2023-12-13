@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/styleProducto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/318ff7de07.js" crossorigin="anonymous"></script>
+    <title>Product Detail</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img
+                        src="../assets/img/logoMicrosoft.jpg"
+                        alt="logoNavbar"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./error404.html"
+                                >Xbox</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Software
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Juegos y entretenimiento
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Todo Microsoft
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./sobreNosotros.html"
+                                >Nosotros</a
+                            >
+                        </li>
+                        <div
+                            class="mt-2 mt-lg-0 d-flex gap-4 gap-lg-3 px-lg-2"
+                        >
+                            <a
+                                class="nav-link navText"
+                                href="./error404.html"
+                                ><i class="bi bi-search"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./error404.html"
+                                ><i class="bi bi-cart2"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./login.html"
+                                ><i class="bi bi-person-circle"></i
+                            ></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="position-static">
+            <section class="banner">
+                <div class="imgBanner">
+                    <img src="https://gepig.com/game_cover_bg_1190w/6776.jpg" alt="">
+                </div>
+                <div class="cont-banner">
+                    <div class="m-lg-5">
+                        <div class="portada">
+                            <img src="https://store-images.s-microsoft.com/image/apps.7859.14506879174941978.138d3eab-0b06-443b-a252-c99592521394.33a348aa-892d-49b8-9ef2-6ff06c22cf96?q=90&w=177&h=265" alt="">
+                            <div class="contTitProduct mx-3">
+                                <h2>Forza Horizon 5 Deluxe Edition</h2>
+                                <h6>Xbox Game Studios • Carreras y vuelo </h6>
+                                <p>3.5: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (1321)</p>
+                                
+                            </div>
+                        </div>
+                        <div class="botonesProducto">
+                            <button type="button" class="btn btn-success btnPersonalizado">OBTENER GAME PASS <br> Ahorra ARS$ 3.099,80 con<span>GAME PASS</span></button>
+
+                            <p class="mt-2"><strong>- O -</strong></p>
+
+                            <button type="button" class="btn btn-secondary btnSecundarios btnPersonalizado">COMPRAR <br> ARS$ 15.499,00+</button>
+
+                            <button type="button" class="btn btn-secondary btnSecundarios text-center btnPersonalizado"><i class="fa-solid fa-cart-shopping "></i></button>
+
+                            <button type="button" class="btn btn-secondary btnSecundarios text-center btnPersonalizado"><i class="fa-solid fa-heart-circle-plus "></i></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <section class="categoria">
+            <article class="row mx-lg-5 py-4">
+                <div class="esrbRate col-lg-6">
+                    <img width="60" height="90" src="https://www.esrb.org/wp-content/uploads/2019/05/E.svg" class="attachment-full size-full" alt="Everyone ESRB rating icon">
+                    <div class="d-flex flex-column mx-3">
+                        <div>
+                            <a href="https://www.esrb.org/ratings-guide/" target="_blank">TODOS <i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <hr>
+                        <p class="avisosProducto">Interacción de usuarios, Compras dentro del juego</p>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <p class="avisosProducto">+Ofrece compras en la aplicación <br> <span>La opción de multijugador en línea en la consola requiere Xbox Game Pass Ultimate o Xbox Game Pass Core (se venden por separado).</span></p>
+                </div>
+            </article>
+        </section>
+
+
+        <!-- Botones Tab Box -->
+        <div class="d-flex justify-content-center mb-5">
+            <div class="mt-5 ">
+                <div class="tab_box">
+                    <button class="tab_btn active">DETALLES</button>
+                    <button class="tab_btn mx-lg-5">OPINIONES</button>
+                    <button class="tab_btn">REQUISITOS</button>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenidos Tab Box -->
+        <section class="py-4 grisOscuFondo">
+            <div class="content_box mx-lg-5 my-5">
+                <!-- Opcion 1 Detalles -->
+                <div class="content active h-100 ">
+                    <article class="contenidoDescripcion row">
+                        <div class="col-lg-6 mb-5">
+                            <h4 class="mb-3">Descripcion</h4>
+                            <div class="separador mb-5"></div>
+                            <p>Miembros de Xbox Game Pass, completen su experiencia de Forza Motorspor y Forza Horizon 5 con esta oferta imposible de perder. El Paquete de complementos premium* de Forza Motorspor + Forza Horizon 5 expande tus aventuras de competencia de carreras y de conducción con los Complementos premium en ambos juegos. Disfruta de DOS expansiones increíbles, Forza Horizon 5: Aventura de Rally y Forza Horizon 5: Hot Wheels. Corre y compite en las mejores pistas del mundo con algunos de los autos más veloces que han tocado el asfalto con el paquete de autos Día de carreras, y con el Pase de autos, la Membresía VIP y el Paquete de bienvenida en ambos juegos.<br><br>
+                            El paquete de complementos premium de Forza Motorsport incluye el paquete de autos Día de carreras, el Pase de autos Forza Motorsport, la membresía VIP y el Paquete de bienvenida.<br><br>   
+                            El paquete de complementos premium de Forza Horizon 5 incluye Forza Horizon 5 Aventura de Rally, Forza Horizon 5: Hot Wheels, el Pase de autos, la membresía VIP y el Paquete de bienvenida.<br><br>
+                                
+                            *Se necesita el juego que se vende por separado o una suscripción a Game Pass (Ultimate, consolas o PC). El catálogo de juegos varía según el plan, durante el tiempo, por región y dispositivo. xbox.com/gamepass</p>
+                            <div class="row mt-5">
+                                <div class="col-lg-3">
+                                    <h5>Publicado por</h5>
+                                    <p>Xbox Game Studios</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>Desarrollado por</h5>
+                                    <p>Turn 10 Studios</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>Fecha de lanzamiento</h5>
+                                    <p>16/11/2023</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>Código del producto:</h5>
+                                    <p>195581</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <h4 class="mb-3">Galería</h4>
+                            <div class="separador mb-5"></div>
+                            <div id="carouselExampleFade" class="carousel slide galeria carousel-fade">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://i.blogs.es/17d08b/forza-horizon-5-cinco-de-mayo/1366_2000.jpeg " class="d-block w-100" alt="">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="https://cdn.motor1.com/images/mgl/W8nx23/s3/forza-horizon-5-series-19-updates-include-four-new-vehicles-and-launch-control-for-all-cars.jpg" class="d-block w-100" alt="...">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="https://cdn.vcgamers.com/news/wp-content/uploads/2023/03/Forza-Horizon-5-PS4.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Opcion 2 Opiniones -->
+                <div class="content">
+                    <div class="contenidoDescripcion row">
+                        <div class="col-lg-4">
+                            <div class="opiniones p-5 mb-5">
+                                <h2>3.5 <i class="fa-solid fa-star fa-xs"></i></h2>
+                                <h4>1321 Opiniones en total</h4>
+                                <div>
+                                    <div class="gridOpiniones">
+                                        <div id="uno" class="d-flex ">
+                                            <p >5 </p>
+                                            
+                                        </div>
+                                        <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-success" style="width: 40%"></div>
+                                        </div>
+                                        <div id="tres">
+                                            <p class="text-end">40%</p>
+                                        </div>
+                                    </div>
+                                    <div class="gridOpiniones">
+                                        <div id="uno" class="d-flex ">
+                                            <p >4</p>
+                                            
+                                        </div>
+                                        <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-success" style="width: 20%"></div>
+                                        </div>
+                                        <div id="tres">
+                                            <p class="text-end">20%</p>
+                                        </div>
+                                    </div>
+                                    <div class="gridOpiniones">
+                                        <div id="uno" class="d-flex ">
+                                            <p >3</p>
+                                            
+                                        </div>
+                                        <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-success" style="width: 12%"></div>
+                                        </div>
+                                        <div id="tres">
+                                            <p class="text-end">12%</p>
+                                        </div>
+                                    </div>
+                                    <div class="gridOpiniones">
+                                        <div id="uno" class="d-flex ">
+                                            <p >2 </p>
+                                            
+                                        </div>
+                                        <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-success" style="width: 12%"></div>
+                                        </div>
+                                        <div id="tres">
+                                            <p class="text-end">12%</p>
+                                        </div>
+                                    </div>
+                                    <div class="gridOpiniones">
+                                        <div id="uno" class="d-flex">
+                                            <p >1 </p>
+                                        </div>
+
+                                        <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-success" style="width: 4%"></div>
+                                        </div>
+
+                                        <div id="tres">
+                                            <p class="text-end">20%</p>
+                                        </div>
+                                    </div>
+               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="comentario p-4">
+                                <div class="usuario d-flex">
+                                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTUkydw1ftRniELAUqBvu-Gnli15xHg-VB8KqPi5ip68qIMf6KO" alt="">
+                                    <div>
+                                        <h3>NombreUsuario</h3>
+                                        <p>FECHA</p>
+                                    </div>
+                                </div>
+                                <h4 class="my-3">TITULO RESEÑA</h4>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, cupiditate. Architecto quod odit impedit consectetur, temporibus, recusandae amet aut optio, ad dolor ea. Soluta ipsum, officia eaque expedita quibusdam reprehenderit.</p>
+                            </div>
+                            <div class="comentario p-4">
+                                <div class="usuario d-flex">
+                                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTUkydw1ftRniELAUqBvu-Gnli15xHg-VB8KqPi5ip68qIMf6KO" alt="">
+                                    <div>
+                                        <h3>NombreUsuario</h3>
+                                        <p>FECHA</p>
+                                    </div>
+                                </div>
+                                <h4 class="my-3">TITULO RESEÑA</h4>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, cupiditate. Architecto quod odit impedit consectetur, temporibus, recusandae amet aut optio, ad dolor ea. Soluta ipsum, officia eaque expedita quibusdam reprehenderit.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opcion 3 Requisitos -->
+                <div class="content">
+                    <article class="contenidoDescripcion row">
+                        <div class="col-lg-6 mb-5">
+                            <h4 class="mb-3">Requisitos Mínimos</h4>
+                            <div class="separador mb-5"></div>
+                            <ul>
+                                <li>Requiere un procesador y un sistema operativo de 64 bits</li>
+                                <li><span>SO: </span>Windows® 10 64 Bit (última actualización)</li>
+                                <li><span>Procesador: </span> Intel® Core™ i3-6100 / Core™ i5-2500K o AMD Ryzen™ 3 1200</li>
+                                <li><span>Memoria: </span>8 GB de RAM</li>
+                                <li><span>Gráficos: </span>NVIDIA® GeForce® GTX 960 o AMD Radeon™ RX 470 - Sistema compatible con DirectX 12.0</li>
+                                <li><span>DirectX: </span>Versión 12</li>
+                                <li><span>Red: </span>Conexión de banda ancha a Internet</li>
+                                <li><span>Almacenamiento: </span> 125 GB de espacio disponible</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="mb-3">Requisitos Recomendados</h4>
+                            <div class="separador mb-5"></div>
+
+                            <ul>
+                                <li>Requiere un procesador y un sistema operativo de 64 bits</li>
+                                <li><span>SO: </span>Windows® 10 64 Bit (última actualización) o Windows® 11 64 Bit (última actualización)</li>
+                                <li><span>Procesador: </span> Intel® Core™ i5-6600K / Core™ i7-4770 o AMD Ryzen™ 5 1400</li>
+                                <li><span>Memoria: </span>12 GB de RAM</li>
+                                <li><span>Gráficos: </span>NVIDIA® GeForce® GTX 1060 or AMD Radeon™ RX 580 - DirectX 12.0 compatible system or Intel® Arc™ A770</li>
+                                <li><span>DirectX: </span>Versión 12</li>
+                                <li><span>Red: </span>Conexión de banda ancha a Internet</li>
+                                <li><span>Almacenamiento: </span> 125 GB de espacio disponible</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="m-lg-5 recomendaciones">
+            <h3 class="mb-4">A los usuarios también les gustó esto</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis minus accusamus omnis voluptas cupiditate nemo molestias. Molestiae, earum, est iste ad vel pariatur quisquam et doloribus praesentium similique ullam saepe.</p>
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="grisOscuFondo py-5">
+        <h1>ESTO ES EL FOOTER</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis tempore, atque hic ea ad quibusdam, ullam minima facilis exercitationem optio iusto voluptas ducimus sequi soluta, provident architecto officiis eaque aspernatur!</p>
+    </footer>
+
+
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous"></script>
+
+<script src="../js/jsProducto.js"></script>
+<script src="https://kit.fontawesome.com/dc095ddc9e.js" crossorigin="anonymous"></script>
+</html>

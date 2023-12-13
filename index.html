@@ -1,356 +1,367 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones ."
-    />
-    <meta
-      name="keywords"
-      content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, "
-    />
-    <meta
-      name="author"
-      content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
-    />
-    <meta
-      name="copyright"
-      content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
-    />
-    <title>Microsoft Store</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./pages/error404.html">
-            <img src="./img/logoMicrosoft.jpg" alt="logoNavbar" />
-          </a>
-          <a class="navbar-brand" href="./pages/error404.html"
-            >Página principal</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./pages/error404.html"
-                  >Xbox</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Software
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./pages/error404.html">Microsoft 365</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Office</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Windows</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Software profesional</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Aplicaciones para Windows</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Soporte técnico</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Juegos y entretenimiento
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./pages/error404.html">Juegos digitales para Xbox</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Juegos para Windows</a></li>
-                  <li><a class="dropdown-item" href="./pages/error404.html">Juegos para Windows phone</a></li>
-                  
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/error404.html"
-                  >Pequeña empresa</a
-                >
-              </li>
-              <li class="nav-item dropdown ">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Todo Microsoft
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="./pages/error404.html">Microsoft.com</a>
-                  </li>
-                </ul>
-              </li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones ."
+        />
+        <meta
+            name="keywords"
+            content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, "
+        />
+        <meta
+            name="author"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <meta
+            name="copyright"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <title>Microsoft Store</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+    </head>
 
-              <li class="nav-item">
-                <a class="nav-link navText" href="./pages/cart.html"
-                  ><i class="fa-solid fa-magnifying-glass"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navText" href="./pages/cart.html"
-                  ><i class="fa-solid fa-cart-shopping"></i
-                ></a>
-              </li><li class="nav-item">
-                <a class="nav-link navText" href="./pages/cart.html"
-                  ><i class="fa-regular fa-circle-user"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="container-fluid">
-      <section class="main row d-flex flex-column flex-sm-row">
-        <div
-          class="col px-0 py-5 d-flex flex-column justify-content-between align-items-center gap-3 col-sm-6"
-        >
-          <h1 class="main-title display-1 fw-semibold">Titulo</h1>
-          <p class="text-center px-3 fs-4 px-lg-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            laudantium placeat deleniti architecto omnis adipisci?
-          </p>
-          <a href="#" class="buy-now">Comprar ahora</a>
-        </div>
-        <div
-          class="col px-0 py-3 d-flex flex-column justify-content-center align-items-center col-sm-6"
-        >
-          <img
-            src="./images/ea-sports-fc-logo-3EECE6A9F4-seeklogo.com.png"
-            alt=""
-            class="img-fluid"
-          />
-        </div>
-      </section>
-      <section class="py-4">
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
-        >
-          <h2 class="display-3 text-center fw-medium">Principales Juegos</h2>
-          <a href="#" class="fs-6 align-self-end">
-            Mostrar todo<i class="bi bi-arrow-right text-primary"></i>
-          </a>
-        </div>
-        <div class="container-lg swiper my-4">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr />
-      <section class="py-4">
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
-        >
-          <h2 class="display-4 text-center fw-medium">Tendencias en Juegos</h2>
-          <a href="#" class="fs-6 align-self-end">
-            Mostrar todo<i class="bi bi-arrow-right text-primary"></i>
-          </a>
-        </div>
-        <div class="container-lg swiper my-4">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column">
-              <img src="./images/example-game.jpeg" alt="" />
-              <div class="card-body">
-                <h3 class="card-title py-3 text-center">juego</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr />
-      <section class="py-4">
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-center px-2"
-        >
-          <h2 class="display-4 text-center fw-medium">Categorias</h2>
-          <a href="#" class="fs-6 align-self-end">
-            Mostrar todo<i class="bi bi-arrow-right text-primary"></i>
-          </a>
-        </div>
-        <div
-          class="categorias my-4 d-flex align-items-center justify-content-center flex-wrap gap-3 flex-column justify-content-sm-start align-content-sm-around"
-        >
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-          <div>
-            <a href="#">categoria</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/app.js"></script>
-    <script
-      src="https://kit.fontawesome.com/82dcc82885.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <body onload="renderJuegos()">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="./pages/error404.html">
+                    <img src="./assets/img/logoMicrosoft.jpg" alt="logoNavbar" />
+                </a>
+                <a class="navbar-brand" href="./pages/error404.html">Página principal</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="./pages/error404.html"
+                            >Xbox</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Software
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./pages/error404.html">Microsoft 365</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Office</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Windows</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Software profesional</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Aplicaciones para Windows</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Soporte técnico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Juegos y entretenimiento
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./pages/error404.html">Juegos digitales para Xbox</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Juegos para Windows</a></li>
+                            <li><a class="dropdown-item" href="./pages/error404.html">Juegos para Windows phone</a></li>
+                            
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/error404.html">Pequeña empresa</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Todo Microsoft
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./pages/error404.html">Microsoft.com</a>
+                            </li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <div class="mt-2 mt-lg-0 d-flex gap-4 gap-lg-3 px-lg-2">
+                            <a
+                                class="nav-link navText"
+                                href="./pages/error404.html"
+                                ><i class="bi bi-search"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./pages/error404.html"
+                                ><i class="bi bi-cart2"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./pages/login.html"
+                                ><i class="bi bi-person-circle"></i
+                            ></a>
+                        </div> 
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-light">
+            <section id="main">
+                <div class="container-fluid main">
+                    <div class="row d-flex flex-column flex-sm-row">
+                        <div
+                            class="col-12 py-5 d-flex flex-column justify-content-between align-items-center gap-3 justify-content-md-center col-sm-6 text-light"
+                        >
+                            <h1
+                                class="main-title display-1 fw-semibold fst-italic"
+                            >
+                                EA FC
+                            </h1>
+                            <p class="text-center px-3 fs-4 px-lg-5 fw-medium">
+                                Llegó EA SPORTS FC™: el siguiente capítulo del
+                                Juego de Todos. Únete a nosotros para construir
+                                el futuro del futbol sobre una base de
+                                innovación y autenticidad con más de 19,000
+                                futbolistas con licencia, más de 700 equipos y
+                                más de 30 ligas.
+                            </p>
+                            <a href="./pages/error404.html" class="buy-now"
+                                >Comprar ahora</a
+                            >
+                        </div>
+                        <div
+                            class="col-12 py-3 d-flex flex-column justify-content-center align-items-center col-sm-6"
+                        >
+                            <video
+                                autoplay
+                                muted
+                                playsinline
+                                loop
+                                src="./images/fc24-hero-lg-motion-pitch-1x1-sm-xs.mp4"
+                                class="img"
+                            ></video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="principales" class="my-5">
+                <div class="container-fluid">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center px-2"
+                    >
+                        <h2 class="display-3 text-center fw-medium">
+                            Principales Juegos
+                        </h2>
+                    </div>
+                    <div class="swiper my-4">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="categorias" class="py-4">
+                <div class="container-fluid">
+                    <div class="d-flex flex-column text-light">
+                        <h2 class="display-4 text-center fw-medium">
+                            Categorias
+                        </h2>
+                    </div>
+                    <div class="categorias mt-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/cod.png"
+                                        alt="accion"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Accion</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/fantasia.png"
+                                        alt="img proyecto 1"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Fantasia</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/aventura.png"
+                                        alt="img proyecto 1"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Aventura</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/kylian-mbappe-fifa-22.png"
+                                        alt="img proyecto 1"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Deportes</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/zombie.png"
+                                        alt="img proyecto 1"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Terror</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div
+                                    class="category d-flex align-items-center justify-content-center"
+                                >
+                                    <img
+                                        src="./images/estrategia.png"
+                                        alt="img proyecto 1"
+                                        class="img-fluid"
+                                    />
+                                    <div class="overlay">
+                                        <a href="./pages/error404.html"
+                                            >Estrategia</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="buscador" class="py-5">
+                <div class="container-fluid">
+                    <div
+                        class="row gap-5 justify-content-md-around justify-content-center align-items-center"
+                    >
+                        <div
+                            class="col-12 col-sm-6 col-md-4 d-flex flex-column justify-content-center align-items-center"
+                        >
+                            <h2 class="display-5 fw-medium text-center mb-4">
+                                Busca tu juego favorito!
+                            </h2>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombre"
+                                placeholder="Ingresa el nombre del juego..."
+                            />
+                            <button
+                                class="btn btn-outline-secondary col-6 mt-3 fw-medium"
+                                onclick="searchJuego()"
+                            >
+                                Buscar
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <a href="./pages/error404.html" class="game">
+                                    <img
+                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c7e6beab-5f5c-4b7c-a79d-74fe474aad9b/ddp2a9m-e60eb1f0-9c7d-492e-98fb-5328fde1704c.png/v1/fill/w_581,h_428/gta_vi_logo__concept__by_mmxxi_ddp2a9m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDI4IiwicGF0aCI6IlwvZlwvYzdlNmJlYWItNWY1Yy00YjdjLWE3OWQtNzRmZTQ3NGFhZDliXC9kZHAyYTltLWU2MGViMWYwLTljN2QtNDkyZS05OGZiLTUzMjhmZGUxNzA0Yy5wbmciLCJ3aWR0aCI6Ijw9NTgxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.QuPiwAfLMbg_QjcfrTuQ0gYMqiZm_Jmkc48gYseT8jI"
+                                        alt="juego de muestra"
+                                        class="img-fluid"
+                                    />
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center">
+                                            GTA VI
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/usuarios.js" type="module"></script>
+    </body>
 </html>

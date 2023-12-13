@@ -1,0 +1,219 @@
+:root {
+    --grisContenedores: #151517;
+    --grisFondo: #1a1b1e;
+    --fuenteTitulo: bahn;
+    --blue: rgb(0, 103, 184);
+    --black: #171617;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--grisFondo);
+    font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+}
+header {
+    background-color: var(--grisContenedores);
+    padding: 4px;
+    height: 54px;
+    position: relative;
+    z-index: 10;
+}
+header h1 {
+    color: #f1f8ff;
+    font-size: 30px;
+}
+
+.banner {
+    position: relative;
+}
+.imgBanner {
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+
+.imgBanner img {
+    filter: blur(15px);
+    z-index: 1;
+    height: 448px;
+    width: 100%;
+}
+.cont-banner {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 453px;
+}
+
+.tituloProducto {
+    display: flex;
+}
+.contTitProduct h2 {
+    font-family: "Bahnschrift Light";
+    font-size: 40px;
+    color: #f1f8ff;
+}
+.contTitProduct p {
+    font-family: "Bahnschrift";
+    font-size: 20px;
+    color: #b6bcc0;
+}
+.contTitProduct p strong {
+    font-family: "Bahnschrift";
+    font-size: 25px;
+    color: #f1f8ff;
+}
+.contTitProduct p i {
+    margin: 10px 2px;
+}
+.botonesProducto {
+    margin: 34px 0;
+    display: flex;
+}
+.btnPersonalizado {
+    padding: 0px 18px;
+    text-align: left;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    background-color: #008746;
+}
+.btnPersonalizado span {
+    background-color: #f1f8ff;
+    color: #008746;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.btnSecundarios {
+    background-color: #484e58;
+    border-color: #484e58;
+    /* padding: 0 30px; */
+    min-width: 62px;
+    margin-right: 20px;
+}
+
+.botonesProducto p {
+    color: #f1f8ff;
+    padding: 10px;
+}
+
+.categoria {
+    position: relative;
+    z-index: 1;
+    background-color: var(--grisContenedores);
+    color: #f1f8ff;
+}
+.esrbRate {
+    display: flex;
+}
+hr {
+    width: 100px;
+    border-width: 3px;
+}
+.esrbRate a {
+    text-decoration: none;
+    color: #f1f8ff;
+    background-color: #484e58;
+    padding: 3.5px;
+    border-radius: 5px;
+}
+.esrbRate a:hover {
+    background-color: #909296;
+}
+
+.img {
+    height: auto;
+    width: 100%;
+    object-fit: fill;
+}
+.swiper {
+    padding: 20px 5px;
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.swiper-slide img {
+    height: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
+#categorias {
+    background-color: var(--blue);
+}
+
+.category {
+    &:hover .overlay {
+        opacity: 1;
+    }
+    &:hover img {
+        opacity: 0.4;
+    }
+    position: relative;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.category img {
+    max-height: 250px;
+}
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.overlay a {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.main {
+    background-color: var(--black);
+}
+.main-title {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+a.buy-now {
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: #05d65c;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: #00ff6a;
+    }
+}
+
+a.game {
+    color: #7b7979;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        color: #000;
+    }
+}

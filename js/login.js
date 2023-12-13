@@ -126,6 +126,20 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleSections("section_pwd", "section_uname");
   };
 
+  document.getElementById("input_username").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      onNextButtonClick();
+    }
+  });
+
+  document.getElementById("input_password").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      onSignInButtonClick();
+    }
+  });
+
   document
     .getElementById("btn_next")
     .addEventListener("click", onNextButtonClick);

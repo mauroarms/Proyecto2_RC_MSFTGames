@@ -1,6 +1,13 @@
 import {usuario} from './class.js'
 
 document.addEventListener("DOMContentLoaded", () => {
+  const adminLoggedIn = localStorage.getItem('adminLogged') === 'true';
+  const invitadoLoggedIn = localStorage.getItem('invitadoLogged') === 'true';
+
+  if(adminLoggedIn || invitadoLoggedIn){
+    window.location.href = '../index.html';
+  }
+
   const usernameRequired =
     "Ingrese una dirección de correo electrónico válida, número de teléfono o nombre de Skype.";
   const passwordRequired = "Ingrese la contraseña de su cuenta de Microsoft.";

@@ -5,22 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">  
+    <link rel="stylesheet" href="../css/style.css" >
     <link rel="stylesheet" href="../css/styleProducto.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/318ff7de07.js" crossorigin="anonymous"></script>
     <title>Product Detail</title>
 </head>
 <body>
     <header>
-        <h1>Esto es el navbar</h1>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logoMicrosoft.jpg" alt="logoNavbar" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./pages/error404.html"
+                                >Xbox</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Software
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Juegos y entretenimiento
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Todo Microsoft
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <div
+                            class="mt-2 mt-lg-0 d-flex gap-4 gap-lg-3 px-lg-2"
+                        >
+                            <a
+                                class="nav-link navText"
+                                href="./pages/cart.html"
+                                ><i class="bi bi-search"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./pages/cart.html"
+                                ><i class="bi bi-cart2"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./pages/cart.html"
+                                ><i class="bi bi-person-circle"></i
+                            ></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-
-
-
     <main>
         <section class="position-static">
             <section class="banner">
@@ -30,7 +170,7 @@
                 <div class="cont-banner">
                     <div class="m-lg-5">
                         <div class="portada">
-                            <img src="https://store-images.s-microsoft.com/image/apps.7859.14506879174941978.138d3eab-0b06-443b-a252-c99592521394.33a348aa-892d-49b8-9ef2-6ff06c22cf96?q=90&w=177&h=265" alt="">
+                            <img id="imgPortada" src="https://store-images.s-microsoft.com/image/apps.7859.14506879174941978.138d3eab-0b06-443b-a252-c99592521394.33a348aa-892d-49b8-9ef2-6ff06c22cf96?q=90&w=177&h=265" alt="PortadaImagen">
                             <div class="contTitProduct mx-3">
                                 <h2>Forza Horizon 5 Deluxe Edition</h2>
                                 <h6>Xbox Game Studios • Carreras y vuelo </h6>
@@ -39,11 +179,11 @@
                             </div>
                         </div>
                         <div class="botonesProducto">
-                            <button type="button" class="btn btn-success btnPersonalizado">OBTENER GAME PASS <br> Ahorra ARS$ 3.099,80 con<span>GAME PASS</span></button>
+                            <button type="button" class="btn btn-success btnPersonalizado" id="btnGP">OBTENER GAME PASS <br> Ahorra ARS$ 3.099,80 con<span>GAME PASS</span></button>
 
                             <p class="mt-2"><strong>- O -</strong></p>
 
-                            <button type="button" class="btn btn-secondary btnSecundarios btnPersonalizado">COMPRAR <br> ARS$ 15.499,00+</button>
+                            <button type="button" class="btn btn-secondary btnSecundarios btnPersonalizado" id="btnCompra">COMPRAR <br> ARS$ 15.499,00</button>
 
                             <button type="button" class="btn btn-secondary btnSecundarios text-center btnPersonalizado"><i class="fa-solid fa-cart-shopping "></i></button>
 
@@ -61,7 +201,7 @@
                     <img width="60" height="90" src="https://www.esrb.org/wp-content/uploads/2019/05/E.svg" class="attachment-full size-full" alt="Everyone ESRB rating icon">
                     <div class="d-flex flex-column mx-3">
                         <div>
-                            <a href="https://www.esrb.org/ratings-guide/" target="_blank">TODOS <i class="fa-solid fa-up-right-from-square"></i></a>
+                            <a id="esrbTxt" href="https://www.esrb.org/ratings-guide/" target="_blank">TODOS <i class="fa-solid fa-up-right-from-square" ></i></a>
                         </div>
                         <hr>
                         <p class="avisosProducto">Interacción de usuarios, Compras dentro del juego</p>
@@ -96,27 +236,19 @@
                         <div class="col-lg-6 mb-5">
                             <h4 class="mb-3">Descripcion</h4>
                             <div class="separador mb-5"></div>
-                            <p>Miembros de Xbox Game Pass, completen su experiencia de Forza Motorspor y Forza Horizon 5 con esta oferta imposible de perder. El Paquete de complementos premium* de Forza Motorspor + Forza Horizon 5 expande tus aventuras de competencia de carreras y de conducción con los Complementos premium en ambos juegos. Disfruta de DOS expansiones increíbles, Forza Horizon 5: Aventura de Rally y Forza Horizon 5: Hot Wheels. Corre y compite en las mejores pistas del mundo con algunos de los autos más veloces que han tocado el asfalto con el paquete de autos Día de carreras, y con el Pase de autos, la Membresía VIP y el Paquete de bienvenida en ambos juegos.<br><br>
-                            El paquete de complementos premium de Forza Motorsport incluye el paquete de autos Día de carreras, el Pase de autos Forza Motorsport, la membresía VIP y el Paquete de bienvenida.<br><br>   
-                            El paquete de complementos premium de Forza Horizon 5 incluye Forza Horizon 5 Aventura de Rally, Forza Horizon 5: Hot Wheels, el Pase de autos, la membresía VIP y el Paquete de bienvenida.<br><br>
-                                
-                            *Se necesita el juego que se vende por separado o una suscripción a Game Pass (Ultimate, consolas o PC). El catálogo de juegos varía según el plan, durante el tiempo, por región y dispositivo. xbox.com/gamepass</p>
+                            <p id="txtDescripcion"></p>
                             <div class="row mt-5">
-                                <div class="col-lg-3">
-                                    <h5>Publicado por</h5>
-                                    <p>Xbox Game Studios</p>
-                                </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-6">
                                     <h5>Desarrollado por</h5>
-                                    <p>Turn 10 Studios</p>
+                                    <p id="txtCreador"></p>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-6">
                                     <h5>Fecha de lanzamiento</h5>
-                                    <p>16/11/2023</p>
+                                    <p id="txtFecha"></p>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-12 mt-5">
                                     <h5>Código del producto:</h5>
-                                    <p>195581</p>
+                                    <p id="txtCodigo"></p>
                                 </div>
                             </div>
                         </div>

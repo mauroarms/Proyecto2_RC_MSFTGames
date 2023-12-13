@@ -174,41 +174,134 @@ renderJuegos();
 
 
 /* ===================== COMENTARIOS ========================*/
+const agregarComentario = (Comentario) =>{
 
+    const estrellas = definirEstrellas(Comentario)
+    console.log(estrellas)
 
-//Ventana Modal y Formulario
+    const etiqComentario = document.createElement("div")
+    etiqComentario.innerHTML = `
+    <div class="comentario p-4">
+        <div class="usuario d-flex">
+            <img src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+            <div>
+                <h3>${Comentario.usuario}</h3>
+                <p>${Comentario.fecha}</p>
+            </div>
+        </div>
+        <h4 class="my-3">${Comentario.titulo}</h4>
+        <p>
+        ${estrellas}
+        </p>
+        <p>${Comentario.descripcion}</p>
+    </div>
+    `
+    console.log(etiqComentario.innerHTML)
+    contenedorComentario.appendChild(etiqComentario)
+}
+const definirEstrellas = (Comentario) =>{
+    let cantidadI =""
+    console.log(Comentario.cantidadEstrellas)
+
+    switch(Comentario.cantidadEstrellas){
+        case "estrella1": 
+            cantidadI += `
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            `
+            break;
+        case "estrella2": 
+            cantidadI += `
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            `
+            break;
+        case "estrella3": 
+            cantidadI += `
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            `
+            break;
+        case "estrella4": 
+            cantidadI += `
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            `
+            break;
+        case "estrella5": 
+            cantidadI += `
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            `
+            break;
+    }
+    
+    return(cantidadI)
+}
+
+//Ventana Modal
 const abrirModalComentario = (e) =>{
     e.preventDefault();
     ventanaModal.show();
 }
+
+//Array de Comentarios
+const arrayComentarios = JSON.parse(localStorage.getItem("listaComentarios")) || [];
+
 const crearComentario = (e) =>{
     e.preventDefault();
+    const fechaActual = new Date()
+    const año = fechaActual.getFullYear();
+    const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0'); // Agregar 1 porque los meses comienzan desde 0
+    const dia = fechaActual.getDate().toString().padStart(2, '0');
+    const fechaComentario = `${año}-${mes}-${dia}`;
 
     /*Tomar Valores del formulario*/
     const titulo = document.getElementById("tituloComentario"),
     descripcion = document.getElementById("descripcionComentario"),
-    fecha = new Date(),
     valoracion = document.getElementById("valoracionComentario"), 
     usuario = "mauroo"
-    console.log(usuario,titulo.value,descripcion.value,fecha,valoracion.value,codigoJuego)
+    console.log(usuario,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
 
-    /*Crear Pelicula*/
-    const nuevoComentario = new Comentario(usuario,titulo.value,descripcion.value,fecha,valoracion.value,codigoJuego)
+    /*Crear Comentario*/
+    const nuevoComentario = new Comentario(usuario,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
     
-    console.log(nuevoComentario)
 
     /*Agregar Pelicula al Array*/
+    arrayComentarios.push(nuevoComentario);
+    
+    /*Ejecutar función que guarda el Array de peliculas actualizado*/
+    // guardarEnLS();
 
+    /*Agregar la pelicula a la tabla*/
+    agregarComentario(nuevoComentario);
+    limpiarFormularioPelicula();
 
 }
+const guardarEnLS = () => localStorage.setItem("listaComentarios", JSON.stringify(arrayComentarios))
 
-const limpiarFormularioPelicula = () => formularioPelicula.reset()
+const limpiarFormularioPelicula = () => ventanaModal.hide()
 
 //Accion de botones
 const ventanaModal = new bootstrap.Modal(document.getElementById("comentarioModal"));
 const formularioComentario = document.getElementById("formNewComentario");
 const btnAgregarComentario = document.getElementById("btnAgregar");
-const contenedorComentario = document.getElementById("contenedorComentarios");
+const contenedorComentario = document.getElementById("contenedorComentario");
 
 
 

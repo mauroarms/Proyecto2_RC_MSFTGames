@@ -162,7 +162,7 @@ export class Comentario{
             usuario: this.usuario,
             titulo: this.titulo,
             descripcion: this.descripcion,
-            fecha: this.fecha.toISOString(), // Se convierte a formato ISO para facilitar la serialización/deserialización de fechas.
+            fecha: this.fecha, // Se convierte a formato ISO para facilitar la serialización/deserialización de fechas.
             cantidadEstrellas: this.cantidadEstrellas,
             idJuego: this.idJuego
         };

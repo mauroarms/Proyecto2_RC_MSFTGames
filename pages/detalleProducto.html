@@ -325,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-primary mx-3" id="btnAgregar">Agregar Comentario</button>
+                                <button class="mx-3 btn btn-success btnPersonalizado p-3" id="btnAgregar">Agregar Comentario</button>
                             </div>
                         </div>
 
@@ -435,7 +435,7 @@
     </footer>
 
 
-    <div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
+    <div class="modal fade" data-bs-theme="dark" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -445,6 +445,11 @@
 
             <div class="modal-body">
                 <form id="formNewComentario">
+                    <div class="mb-3">
+                      <label for="autorComentario" class="form-label">Ingrese su Nombre:</label>
+                      <input type="text" class="form-control" id="autorComentario" aria-describedby="autorComentario" maxlength="40">
+                    </div>
+
                     <div class="mb-3">
                       <label for="tituloComentario" class="form-label">Titulo</label>
                       <input type="text" class="form-control" id="tituloComentario" aria-describedby="tituloComentario" maxlength="40">
@@ -467,7 +472,7 @@
                       </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                    <button type="submit" class="btn-success btnPersonalizado p-3">Enviar Comentario</button>
                 </form>
             </div>
 

@@ -50,17 +50,15 @@ tabs.forEach((tab, index) => {
     })
 })
 
-//Obtener Juegos
+/* ===================== JUEGOS RECOMENDADOS ========================*/
 const juegos = JSON.parse(localStorage.getItem("listado")) || [];
 
-//Obtener código del juego vía url
 const parametroIdUrl = new URLSearchParams(window.location.search);
 const codigoJuego = parametroIdUrl.get('codigo')
 
-//Obtener Objeto Juego Seleccionado
 const juego = juegos.find((Juego)=>Juego.codigo === codigoJuego)
 
-
+/* ===================== CARGAR JUEGOS EN HTML ========================*/
 
 const graficarJuego = (Juego) =>{
     const titulo = document.querySelector(".contTitProduct h2")
@@ -177,8 +175,7 @@ renderJuegos();
 const agregarComentario = (Comentario) =>{
 
     const estrellas = definirEstrellas(Comentario)
-    console.log(estrellas)
-
+    const contenedorComentario = document.getElementById("contenedorComentario");
     const etiqComentario = document.createElement("div")
     etiqComentario.innerHTML = `
     <div class="comentario p-4">
@@ -196,12 +193,11 @@ const agregarComentario = (Comentario) =>{
         <p>${Comentario.descripcion}</p>
     </div>
     `
-    console.log(etiqComentario.innerHTML)
+
     contenedorComentario.appendChild(etiqComentario)
 }
 const definirEstrellas = (Comentario) =>{
     let cantidadI =""
-    console.log(Comentario.cantidadEstrellas)
 
     switch(Comentario.cantidadEstrellas){
         case "estrella1": 
@@ -253,21 +249,27 @@ const definirEstrellas = (Comentario) =>{
     
     return(cantidadI)
 }
-
-//Ventana Modal
+const graficarComentarios = (comentarios) =>{
+    if(comentarios.length>0){
+        for(let i=0; i<comentarios.length; i++) agregarComentario(comentarios[i]);
+    }
+}
 const abrirModalComentario = (e) =>{
     e.preventDefault();
     ventanaModal.show();
 }
 
-//Array de Comentarios
-const arrayComentarios = JSON.parse(localStorage.getItem("listaComentarios")) || [];
+
+// //Array de Comentarios
+
+const arrayComentarios = JSON.parse(localStorage.getItem(codigoJuego)) || [];
+graficarComentarios(arrayComentarios);
 
 const crearComentario = (e) =>{
     e.preventDefault();
     const fechaActual = new Date()
     const año = fechaActual.getFullYear();
-    const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0'); // Agregar 1 porque los meses comienzan desde 0
+    const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
     const dia = fechaActual.getDate().toString().padStart(2, '0');
     const fechaComentario = `${año}-${mes}-${dia}`;
 
@@ -275,25 +277,23 @@ const crearComentario = (e) =>{
     const titulo = document.getElementById("tituloComentario"),
     descripcion = document.getElementById("descripcionComentario"),
     valoracion = document.getElementById("valoracionComentario"), 
-    usuario = "mauroo"
-    console.log(usuario,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
+    usuario = document.getElementById("autorComentario");
 
     /*Crear Comentario*/
-    const nuevoComentario = new Comentario(usuario,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
+    const nuevoComentario = new Comentario(usuario.value,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
     
-
     /*Agregar Pelicula al Array*/
     arrayComentarios.push(nuevoComentario);
-    
+
     /*Ejecutar función que guarda el Array de peliculas actualizado*/
-    // guardarEnLS();
+    guardarEnLS();
 
     /*Agregar la pelicula a la tabla*/
     agregarComentario(nuevoComentario);
     limpiarFormularioPelicula();
 
 }
-const guardarEnLS = () => localStorage.setItem("listaComentarios", JSON.stringify(arrayComentarios))
+const guardarEnLS = () => localStorage.setItem(codigoJuego, JSON.stringify(arrayComentarios))
 
 const limpiarFormularioPelicula = () => ventanaModal.hide()
 
@@ -301,8 +301,6 @@ const limpiarFormularioPelicula = () => ventanaModal.hide()
 const ventanaModal = new bootstrap.Modal(document.getElementById("comentarioModal"));
 const formularioComentario = document.getElementById("formNewComentario");
 const btnAgregarComentario = document.getElementById("btnAgregar");
-const contenedorComentario = document.getElementById("contenedorComentario");
-
 
 
 

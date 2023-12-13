@@ -300,6 +300,9 @@ li span{
     text-align: center;
     color: var(--blancoLetras);
 }
+.form-label{
+    color: var(--blancoLetras);
+}
 
 
 @media screen and (max-width: 767px) {

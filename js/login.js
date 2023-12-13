@@ -1,6 +1,13 @@
 import {usuario} from './class.js'
 
 document.addEventListener("DOMContentLoaded", () => {
+  const adminLoggedIn = localStorage.getItem('adminLogged') === 'true';
+  const invitadoLoggedIn = localStorage.getItem('invitadoLogged') === 'true';
+
+  if(adminLoggedIn || invitadoLoggedIn){
+    window.location.href = '../index.html';
+  }
+
   const usernameRequired =
     "Ingrese una dirección de correo electrónico válida, número de teléfono o nombre de Skype.";
   const passwordRequired = "Ingrese la contraseña de su cuenta de Microsoft.";
@@ -118,6 +125,20 @@ document.addEventListener("DOMContentLoaded", () => {
     view = "username";
     toggleSections("section_pwd", "section_uname");
   };
+
+  document.getElementById("input_username").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      onNextButtonClick();
+    }
+  });
+
+  document.getElementById("input_password").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      onSignInButtonClick();
+    }
+  });
 
   document
     .getElementById("btn_next")

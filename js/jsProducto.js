@@ -258,12 +258,76 @@ const abrirModalComentario = (e) =>{
     e.preventDefault();
     ventanaModal.show();
 }
+const refrescarPuntuacion=(comentarios)=>{
+    const totalOpiniones = document.getElementById("total")
+    totalOpiniones.innerHTML = comentarios.length
+    
+    const promedio = document.getElementById("promedio")
+    const porc5 = document.getElementById("porc5")
+    const porc4 = document.getElementById("porc4")
+    const porc3 = document.getElementById("porc3")
+    const porc2 = document.getElementById("porc2")
+    const porc1 = document.getElementById("porc1")
+    const barra5 = document.getElementById("longBarra5")
+    const barra4 = document.getElementById("longBarra4")
+    const barra3 = document.getElementById("longBarra3")
+    const barra2 = document.getElementById("longBarra2")
+    const barra1 = document.getElementById("longBarra1")
+    
+    
+    let totalCincoE = 0 
+    let totalCuatroE = 0 
+    let totalTresE = 0 
+    let totalDosE = 0 
+    let totalUnaE = 0 
+    
+    comentarios.map(Comentario => {
+        switch(Comentario.cantidadEstrellas){
+            case "estrella1": 
+                totalUnaE++
+                break;
+            case "estrella2": 
+                totalDosE++
+                break;
+            case "estrella3": 
+                totalTresE++
+                break;
+            case "estrella4": 
+                totalCuatroE++
+                
+                break;
+            case "estrella5": 
+                totalCincoE++;   
+                break;
+        }
+        });
+    
+        let valor5E = (totalCincoE/comentarios.length *100).toFixed(1) + "%"
+        let valor4E = (totalCuatroE/comentarios.length*100).toFixed(1) + "%"
+        let valor3E = (totalTresE/comentarios.length*100).toFixed(1) + "%"
+        let valor2E = (totalDosE/comentarios.length*100).toFixed(1) + "%"
+        let valor1E = (totalUnaE/comentarios.length*100).toFixed(1) + "%"
+    
+        porc5.innerHTML = valor5E
+        porc4.innerHTML = valor4E
+        porc3.innerHTML = valor3E
+        porc2.innerHTML = valor2E
+        porc1.innerHTML = valor1E
+    
+        barra5.style.width = valor5E
+        barra4.style.width = valor4E
+        barra3.style.width = valor3E
+        barra2.style.width = valor2E
+        barra1.style.width = valor1E
+    
+        let promTotal = ((5*totalCincoE+4*totalCuatroE+3*totalTresE+2*totalDosE+totalUnaE)/comentarios.length).toFixed(1)
+        promedio.innerHTML = promTotal
+}
 
-
-// //Array de Comentarios
 
 const arrayComentarios = JSON.parse(localStorage.getItem(codigoJuego)) || [];
 graficarComentarios(arrayComentarios);
+refrescarPuntuacion(arrayComentarios);
 
 const crearComentario = (e) =>{
     e.preventDefault();
@@ -290,19 +354,18 @@ const crearComentario = (e) =>{
 
     /*Agregar la pelicula a la tabla*/
     agregarComentario(nuevoComentario);
-    limpiarFormularioPelicula();
+    cerrarFormularioPelicula();
+    refrescarPuntuacion(arrayComentarios);
 
 }
 const guardarEnLS = () => localStorage.setItem(codigoJuego, JSON.stringify(arrayComentarios))
 
-const limpiarFormularioPelicula = () => ventanaModal.hide()
+const cerrarFormularioPelicula = () => ventanaModal.hide()
 
 //Accion de botones
 const ventanaModal = new bootstrap.Modal(document.getElementById("comentarioModal"));
 const formularioComentario = document.getElementById("formNewComentario");
 const btnAgregarComentario = document.getElementById("btnAgregar");
-
-
 
 btnAgregarComentario.addEventListener("click", abrirModalComentario) //Abrir Modal al darle click
 formularioComentario.addEventListener("submit", crearComentario)  //Crear Peli al enviar formulario

@@ -257,8 +257,8 @@
                     <div class="contenidoDescripcion row">
                         <div class="col-lg-4">
                             <div class="opiniones p-5 mb-5">
-                                <h2>3.5 <i class="fa-solid fa-star fa-xs"></i></h2>
-                                <h4>1321 Opiniones en total</h4>
+                                <h2 id="promedio">3.5 <i class="fa-solid fa-star fa-xs"></i></h2>
+                                <h4><span id="total">231</span> Opiniones en total</h4>
                                 <div>
                                     <div class="gridOpiniones">
                                         <div id="uno" class="d-flex ">
@@ -266,10 +266,10 @@
                                             
                                         </div>
                                         <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 40%"></div>
+                                            <div class="progress-bar bg-success" style="width: 0%" id="longBarra5"></div>
                                         </div>
                                         <div id="tres">
-                                            <p class="text-end">40%</p>
+                                            <p class="text-end" id="porc5">40%</p>
                                         </div>
                                     </div>
                                     <div class="gridOpiniones">
@@ -278,10 +278,10 @@
                                             
                                         </div>
                                         <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 20%"></div>
+                                            <div class="progress-bar bg-success" style="width: 0%" id="longBarra4"></div>
                                         </div>
                                         <div id="tres">
-                                            <p class="text-end">20%</p>
+                                            <p class="text-end" id="porc4">20%</p>
                                         </div>
                                     </div>
                                     <div class="gridOpiniones">
@@ -290,10 +290,10 @@
                                             
                                         </div>
                                         <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 12%"></div>
+                                            <div class="progress-bar bg-success" style="width: 0%" id="longBarra3"></div>
                                         </div>
                                         <div id="tres">
-                                            <p class="text-end">12%</p>
+                                            <p class="text-end" id="porc3">12%</p>
                                         </div>
                                     </div>
                                     <div class="gridOpiniones">
@@ -302,10 +302,10 @@
                                             
                                         </div>
                                         <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 12%"></div>
+                                            <div class="progress-bar bg-success" style="width: 0%" id="longBarra2"></div>
                                         </div>
                                         <div id="tres">
-                                            <p class="text-end">12%</p>
+                                            <p class="text-end" id="porc2">12%</p>
                                         </div>
                                     </div>
                                     <div class="gridOpiniones">
@@ -314,11 +314,11 @@
                                         </div>
 
                                         <div id="dos" class="progress g-col-6 mt-1" role="progressbar" aria-label="Success" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar bg-success" style="width: 4%"></div>
+                                            <div class="progress-bar bg-success" style="width: 0%" id="longBarra1"></div>
                                         </div>
 
                                         <div id="tres">
-                                            <p class="text-end">20%</p>
+                                            <p class="text-end" id="porc1">20%</p>
                                         </div>
                                     </div>
                
@@ -329,45 +329,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-8 d-flex flex-column-reverse" id="contenedorComentario">
-                            <div class="comentario p-4">
-                                <div class="usuario d-flex">
-                                    <img src="https://assetsio.reedpopcdn.com/pokemon_go_eevee_thumbnail.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp" alt="">
-                                    <div>
-                                        <h3>GamerExplorer92</h3>
-                                        <p>2023-07-14</p>
-                                    </div>
-                                </div>
-                                <h4 class="my-3">Una Experiencia Sólida, pero No Excepcional</h4>
-                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></p>
-                                <p>He pasado unas cuantas horas jugando a este título y tengo sentimientos encontrados al respecto. En términos generales, ofrece una experiencia de juego sólida con gráficos decentes y una jugabilidad aceptable. La trama es estándar y cumple su función, aunque no ofrece giros inesperados ni momentos impactantes.</p>
-                            </div>
-
-                            <div class="comentario p-4">
-                                <div class="usuario d-flex">
-                                    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=406x10000:format=png/path/s79a07084dca5a4b7/image/i1afb87cd5ad0e080/version/1470824366/image.png" alt="">
-                                    <div>
-                                        <h3>ShadowWarrior23</h3>
-                                        <p>2023-10-11</p>
-                                    </div>
-                                </div>
-                                <h4 class="my-3">Una Joya que Supera Todas las Expectativas</h4>
-                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                                <p>Este juego es simplemente increíble y superó todas mis expectativas. Desde el primer momento, quedé impresionado por la calidad de los gráficos y la atención al detalle en cada aspecto del diseño. Los personajes son profundos y bien desarrollados, contribuyendo a una narrativa cautivadora que me mantuvo completamente inmerso de principio a fin.</p>
-                            </div>
-
-                            <div class="comentario p-4">
-                                <div class="usuario d-flex">
-                                    <img src="https://i.pinimg.com/originals/69/14/48/691448a61b6a2aea18f0360212fa6b45.png" alt="">
-                                    <div>
-                                        <h3>PixelPioneer98</h3>
-                                        <p>2023-12-10</p>
-                                    </div>
-                                </div>
-                                <h4 class="my-3">Una Experiencia Decepcionante</h4>
-                                <p><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></p>
-                                <p>Este juego ha sido una gran decepción desde el principio. La promesa de gráficos impresionantes y una jugabilidad envolvente simplemente no se cumple. Los personajes carecen de profundidad y la trama es predecible y aburrida. Los controles son torpes y poco intuitivos, lo que hace que la experiencia sea frustrante en lugar de divertida.</p>
-                            </div>
+                        <div class="col-lg-8 d-flex flex-column" id="contenedorComentario">              
 
                         </div>
                     </div>

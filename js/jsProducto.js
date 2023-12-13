@@ -82,7 +82,6 @@ const graficarJuego = (Juego) =>{
     id.innerHTML = Juego.codigo
   
 }
-
 graficarJuego(juego);
 
 

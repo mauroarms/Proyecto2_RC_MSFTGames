@@ -155,9 +155,13 @@ hr {
 }
 
 #categorias {
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    
+    background-color: #4158d0;
+    background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+    );
 }
 
 .category {
@@ -218,4 +222,16 @@ a.game {
     &:hover {
         color: #000;
     }
+}
+
+footer a {
+    font-size: smaller;
+    text-decoration: none;
+    line-height: 2.5;
+    color: #8b8989;
+}
+
+footer a:hover {
+    color: #464646;
+    text-decoration: underline;
 }

@@ -324,8 +324,12 @@
                
                                 </div>
                             </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary mx-3" id="btnAgregar">Agregar Comentario</button>
+                            </div>
                         </div>
-                        <div class="col-lg-8">
+
+                        <div class="col-lg-8" id="contenedorComentario">
                             <div class="comentario p-4">
                                 <div class="usuario d-flex">
                                     <img src="https://i.pinimg.com/originals/69/14/48/691448a61b6a2aea18f0360212fa6b45.png" alt="">
@@ -430,12 +434,54 @@
     </footer>
 
 
+    <div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="comentarioModalLabel">Agregar Comentario</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="formNewComentario">
+                    <div class="mb-3">
+                      <label for="tituloComentario" class="form-label">Titulo</label>
+                      <input type="text" class="form-control" id="tituloComentario" aria-describedby="tituloComentario" maxlength="40">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="descripcionComentario" class="form-label">Descripcion</label>
+                      <textarea id="descripcionComentario" rows="6" class="form-control" maxlength="180" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="valoracionComentario" class="form-label">Cantidad de Estrellas</label>
+                      <select name="valoracionComentario" id="valoracionComentario" class="form-control" required>
+                        <option value="">Seleccione una opcion</option>
+                        <option value="estrella5">5</option>
+                        <option value="estrella4">4</option>
+                        <option value="estrella3">3</option>
+                        <option value="estrella2">2</option>
+                        <option value="estrella1">1</option>
+                      </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                </form>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/jsProducto.js"></script>
+    <script src="../js/jsProducto.js" type="module"></script>
     <script src="https://kit.fontawesome.com/dc095ddc9e.js" crossorigin="anonymous"></script>
 </body>
 

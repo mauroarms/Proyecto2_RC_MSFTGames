@@ -1,3 +1,4 @@
+import {Comentario} from "./class.js"
 document.addEventListener("DOMContentLoaded", () => {
     const adminLoggedIn = localStorage.getItem('adminLogged') === 'true';
     const invitadoLoggedIn = localStorage.getItem('invitadoLogged') === 'true';
@@ -58,7 +59,7 @@ const codigoJuego = parametroIdUrl.get('codigo')
 
 //Obtener Objeto Juego Seleccionado
 const juego = juegos.find((Juego)=>Juego.codigo === codigoJuego)
-console.log(juego)
+
 
 
 const graficarJuego = (Juego) =>{
@@ -85,7 +86,7 @@ const graficarJuego = (Juego) =>{
     const esrbEdadImg = document.querySelector(".esrbRate img")
     const esrbEdadTxt = document.getElementById("esrbTxt")
 
-    console.log(esrbEdadTxt)
+ 
     switch(Juego.edad){
         case "+10":
             esrbEdadImg.src = "https://www.esrb.org/wp-content/uploads/2019/05/E10plus.svg"
@@ -118,7 +119,7 @@ const graficarJuego = (Juego) =>{
 }
 graficarJuego(juego);
 
-
+/* ===================== JUEGOS RECOMENDADOS ========================*/
 const getSize = () => {
     if (screen.width <= 350) {
         return 1;
@@ -146,7 +147,6 @@ const swiper = new Swiper(".swiper", {
 
 const renderJuegos = () => {
     const contenedor = document.querySelector(".swiper-wrapper");
-    console.log(contenedor)
     if (!juegos.length) {
         contenedor.innerHTML = `<h2 class="display-3 text-center mx-auto">No hay juegos guardados</h2>`;
     }
@@ -171,4 +171,47 @@ const renderJuegos = () => {
 };
 
 renderJuegos();
-console.log(codigoJuego)
+
+
+/* ===================== COMENTARIOS ========================*/
+
+
+//Ventana Modal y Formulario
+const abrirModalComentario = (e) =>{
+    e.preventDefault();
+    ventanaModal.show();
+}
+const crearComentario = (e) =>{
+    e.preventDefault();
+
+    /*Tomar Valores del formulario*/
+    const titulo = document.getElementById("tituloComentario"),
+    descripcion = document.getElementById("descripcionComentario"),
+    fecha = new Date(),
+    valoracion = document.getElementById("valoracionComentario"), 
+    usuario = "mauroo"
+    console.log(usuario,titulo.value,descripcion.value,fecha,valoracion.value,codigoJuego)
+
+    /*Crear Pelicula*/
+    const nuevoComentario = new Comentario(usuario,titulo.value,descripcion.value,fecha,valoracion.value,codigoJuego)
+    
+    console.log(nuevoComentario)
+
+    /*Agregar Pelicula al Array*/
+
+
+}
+
+const limpiarFormularioPelicula = () => formularioPelicula.reset()
+
+//Accion de botones
+const ventanaModal = new bootstrap.Modal(document.getElementById("comentarioModal"));
+const formularioComentario = document.getElementById("formNewComentario");
+const btnAgregarComentario = document.getElementById("btnAgregar");
+const contenedorComentario = document.getElementById("contenedorComentarios");
+
+
+
+
+btnAgregarComentario.addEventListener("click", abrirModalComentario) //Abrir Modal al darle click
+formularioComentario.addEventListener("submit", crearComentario)  //Crear Peli al enviar formulario

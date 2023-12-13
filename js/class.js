@@ -146,14 +146,15 @@ export class usuario {
     }
 }
 
-export class Comenario{
+export class Comentario{
 
-    constructor(usuario, titulo, descripcion, fecha, cantidadEstrellas) {
+    constructor(usuario, titulo, descripcion, fecha, cantidadEstrellas, idJuego) {
         this.usuario = usuario;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.cantidadEstrellas = cantidadEstrellas;
+        this.idJuego = idJuego;
     }
 
     toJSON() {
@@ -162,7 +163,8 @@ export class Comenario{
             titulo: this.titulo,
             descripcion: this.descripcion,
             fecha: this.fecha.toISOString(), // Se convierte a formato ISO para facilitar la serialización/deserialización de fechas.
-            cantidadEstrellas: this.cantidadEstrellas
+            cantidadEstrellas: this.cantidadEstrellas,
+            idJuego: this.idJuego
         };
     }
 }

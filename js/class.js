@@ -145,3 +145,24 @@ export class usuario {
         }
     }
 }
+
+export class Comenario{
+
+    constructor(usuario, titulo, descripcion, fecha, cantidadEstrellas) {
+        this.usuario = usuario;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.cantidadEstrellas = cantidadEstrellas;
+    }
+
+    toJSON() {
+        return {
+            usuario: this.usuario,
+            titulo: this.titulo,
+            descripcion: this.descripcion,
+            fecha: this.fecha.toISOString(), // Se convierte a formato ISO para facilitar la serialización/deserialización de fechas.
+            cantidadEstrellas: this.cantidadEstrellas
+        };
+    }
+}

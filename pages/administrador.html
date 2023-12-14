@@ -1,120 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones .">
-    <meta name="keywords" content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, ">
-    <meta name="author" content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina" />
-    <meta name="copyright" content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina" />
-    <title>Microsoft store administrador</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header class="container-fluid mb-5 d-flex">
-        <h2>NAVBAR ACTUALIZADA</h2>
-        <div class="container d-flex justify-content-center">
-            <img src="https://windowsreport.com/wp-content/uploads/2017/09/Windows-Store-to-Microsoft-Store.jpg"  alt="Logo de microsoft Store">
-        </div>
-    </header>
-    <main class="container">
-        <section>
-            <h1>Microsoft Store administrador</h1>
-            <p>Para añadir nuevos juegos apretar en agregar y completar los campos correspondientes</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJuego"  id="btnAdd">Agregar Juego</button>
-        </section>
-        <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Titulo</th>
-                  <th scope="col">Descripcion</th>
-                  <th scope="col">Imagen</th>
-                  <th scope="col">Genero</th>
-                  <th scope="col">Creador</th>
-                  <th scope="col">Fecha de Lanzamiento</th>
-                  <th scope="col">Edad Recomendada</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg	">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-1" id="modalJuegoLabel">Agregar Juego</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form id="formAdministrarJuego">
-                <div class="mb-3">
-                  <label for="codigo" class="form-label">Cod</label>
-                  <input type="text" class="form-control" id="codigo" aria-describedby="codigo" disabled>
-                </div>
-                <div class="mb-3">
-                  <label for="titulo" class="form-label">Titulo</label>
-                  <input type="text" class="form-control" id="titulo" aria-describedby="titulo" required>
-                </div>
-                <div class="mb-3">
-                  <label for="descripcion" class="form-label">Descripcion</label>
-                  <textarea id="descripcion" rows="4" class="form-control" required></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="imagen" class="form-label">Imagen (Ingrese Url)</label>
-                  <input type="text" class="form-control" id="imagen" aria-describedby="imagen" required>
-                </div>
-                <div class="mb-3">
-                  <label for="genero" class="form-label">Genero</label>
-                  <select id="selectGenero" class="form-control" required>
-                      <option value="">Seleccione una opcion</option>
-                      <option value="accion">Accion</option>
-                      <option value="fantasia">Fantasia</option>
-                      <option value="aventura">Aventura</option>
-                      <option value="Deportes">Deportes</option>
-                      <option value="terror">Terror</option>
-                      <option value="Estrategia">Estrategia</option>
-                      <option value="Lucha y peleas">Lucha y peleas</option>
-                  </select>
-              </div>
-              <div class="mb-3">
-                  <label for="Creador" class="form-label">Creador</label>
-                  <input type="text" class="form-control" id="creador" aria-describedby="Creador" required>
-              </div>
-              
-                <div class="mb-3">
-                    <label for="titulo" class="form-label">Fecha de Lanzamiento</label>
-                    <input type="text" class="form-control" id="lanzamiento" aria-describedby="Fecha de Lanzamiento" required>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Descubre Proyecto final de la Escuela de Programación Rolling Code: un Store de juegos gamers creado con habilidades en HTML, CSS, Bootstrap, Javascript y git. Explora una experiencia de compra única para los amantes de los videojuegos encontrando las mejores opciones ."
+        />
+        <meta
+            name="keywords"
+            content="Prueba, Rollingcode, Practica, Html, Etiquetas, Proyecto final, ecommerce, tech, gaming, Javascript, Bootstrap, git, "
+        />
+        <meta
+            name="author"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <meta
+            name="copyright"
+            content="Luciano Cabello, Lucia Barraza, Mauro Armas, Nicolas Saavedra, Joaquin Medina"
+        />
+        <title>Microsoft store administrador</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/styleFooter.css" >
+        <link rel="stylesheet" href="../css/styleAdministrador.css" />
 
-                <div class="mb-3">
-                    <label for="edad" class="form-label">Edad Recomendada</label>
-                    <select id="selectEdad" class="form-control" required>
-                      <option value="">Seleccione una opcion</option>
-                      <option value="Todo Public">Todo Publico</option>
-                      <option value="+10">+ 10 Años</option>
-                      <option value="13">+ 13 Años</option>
-                      <option value="17">+ 17 Años</option>
-                      <option value="18">+ 18 Años</option>
-                    </select>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logoMicrosoft.jpg" alt="logoNavbar" />
+                </a>
+                <a href="./sobreNosotros.html" class="navbar-brand">Sobre Nosotros</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="./error404.html"
+                            >Xbox</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Software
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./error404.html">Microsoft 365</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Office</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Windows</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Software profesional</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Aplicaciones para Windows</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Soporte técnico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Juegos y entretenimiento
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./error404.html">Juegos digitales para Xbox</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Juegos para Windows</a></li>
+                            <li><a class="dropdown-item" href="./error404.html">Juegos para Windows phone</a></li>
+                            
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./error404.html">Pequeña empresa</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Todo Microsoft
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./error404.html">Microsoft.com</a>
+                            </li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <div class="mt-2 mt-lg-0 d-flex gap-4 gap-lg-3 px-lg-2">
+                            <a
+                                class="nav-link navText"
+                                href="./error404.html"
+                                ><i class="bi bi-search"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./error404.html"
+                                ><i class="bi bi-cart2"></i
+                            ></a>
+                            <a
+                                class="nav-link navText"
+                                href="./login.html"
+                                ><i class="bi bi-person-circle"></i
+                            ></a>
+                        </div> 
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="container position-relative py-5">
+            <section class="my-5 seccionAdministrador ">
+                <img class="imgContainer" src="https://windowsreport.com/wp-content/uploads/2021/05/top-windows-games-store-1.jpg" alt="Microsoft Store Games" width="300">
+                <h1 class="my-5">Microsoft Store administrador</h1>
+                <div class="adminHead">
+
+                    <p>
+                        Gestiona y administra la colección de juegos de Microsoft Store con facilidad. 
+                        Desde aquí, agrega nuevos juegos, editar información existente y mantener 
+                        actualizado el catálogo para ofrecer la mejor experiencia a los usuarios.
+                    </p>
+                    <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalJuego"
+                    id="btnAdd"
+                    >
+                    Agregar Juego
+                </button>
+            </div>
+            </section>
+            <div class="table-responsive " data-bs-theme="dark">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Genero</th>
+                            <th scope="col">Creador</th>
+                            <th scope="col">Fecha de Lanzamiento</th>
+                            <th scope="col">Edad Recomendada</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div
+                class="modal fade"
+                id="modalJuego"
+                tabindex="-1"
+                aria-labelledby="modalJuegoLabel"
+                aria-hidden="true"
+                data-bs-theme="dark"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-1" id="modalJuegoLabel">
+                                Agregar Juego
+                            </h1>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formAdministrarJuego">
+                                <div class="mb-3">
+                                    <label for="codigo" class="form-label"
+                                        >Cod</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="codigo"
+                                        aria-describedby="codigo"
+                                        disabled
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="titulo" class="form-label"
+                                        >Titulo</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="titulo"
+                                        aria-describedby="titulo"
+                                        placeholder="Titulo del Juego"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label"
+                                        >Descripcion</label
+                                    >
+                                    <textarea
+                                        id="descripcion"
+                                        rows="4"
+                                        class="form-control"
+                                        required
+                                        placeholder="Descripcion de que trata el juego"
+                                    ></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="imagen" class="form-label"
+                                        >Imagen (Ingrese Url)</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="imagen"
+                                        aria-describedby="imagen"
+                                        required
+                                        placeholder="URL de la imagen de portada"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="genero" class="form-label"
+                                        >Genero</label
+                                    >
+                                    <select
+                                        id="selectGenero"
+                                        class="form-control"
+                                        required
+                                    >
+                                        <option value="">
+                                            Seleccione una opcion
+                                        </option>
+                                        <option value="accion">Accion</option>
+                                        <option value="fantasia">
+                                            Fantasia
+                                        </option>
+                                        <option value="aventura">
+                                            Aventura
+                                        </option>
+                                        <option value="Deportes">
+                                            Deportes
+                                        </option>
+                                        <option value="terror">Terror</option>
+                                        <option value="Estrategia">
+                                            Estrategia
+                                        </option>
+                                        <option value="Lucha y peleas">
+                                            Lucha y peleas
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Creador" class="form-label"
+                                        >Creador</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="creador"
+                                        aria-describedby="Creador"
+                                        required
+                                        placeholder="Creador del Juego"
+                                    />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="lanzamiento" class="form-label"
+                                        >Fecha de Lanzamiento</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="lanzamiento"
+                                        aria-describedby="Fecha de Lanzamiento"
+                                        placeholder="YYYY-MM-DD"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="edad" class="form-label"
+                                        >Edad Recomendada</label
+                                    >
+                                    <select
+                                        id="selectEdad"
+                                        class="form-control"
+                                        required
+                                    >
+                                        <option value="">
+                                            Seleccione una opcion
+                                        </option>
+                                        <option value="Todo Public">
+                                            Todo Publico
+                                        </option>
+                                        <option value="+10">+ 10 Años</option>
+                                        <option value="13">+ 13 Años</option>
+                                        <option value="17">+ 17 Años</option>
+                                        <option value="18">+ 18 Años</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="precio" class="form-label"
+                                        >Precio</label
+                                    >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="precio"
+                                        aria-describedby="Precio"
+                                        required
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    id="btnSubmit"
+                                    class="btn btn-primary"
+                                >
+                                    Enviar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer data-bs-theme="dark">
+                <section class="container-fluid bg-body-tertiary">
+                  <article class="row py-3 px-3 g-3">
+                    <div class="col-lg-2 text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Novedades</li>
+                        <a href="./pages/error404.html"> <li>Microsoft 365</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Aplicaciones de Windows 11</li></a
+                        >
+                      </ul>
+                    </div>
+                    <div class="col-lg-2  text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Microsoft Store</li>
+                        <a href="./pages/error404.html"> <li>Perfil de la cuenta</li></a>
+                        <a href="./pages/error404.html"> <li>Centro de descargas</li></a>
+                        <a href="./pages/error404.html"> <li>Devoluciones</li></a>
+                        <a href="./pages/error404.html"> <li>Centro de pedidos</li></a>
+                      </ul>
+                    </div>
+                    <div class="col-lg-2  text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Educación</li>
+                        <a href="./pages/error404.html"> <li>Microsoft Educación</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Dispositivos del sector educativo</li></a
+                        >
+                        <a href="./pages/error404.html">
+                          <li>Microsoft Teams para Educación</li></a
+                        >
+                        <a href="./pages/error404.html">
+                          <li>Microsoft 365 Educación</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Office Educación</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Entrenamiento y desarrollo para educadores</li></a
+                        >
+                        <a href="./pages/error404.html">
+                          <li>Ofertas para estudiantes y padres</li></a
+                        >
+                        <a href="./pages/error404.html">
+                          <li>Azure para estudiantes</li></a
+                        >
+                      </ul>
+                    </div>
+                    <div class="col-lg-2  text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Empresa</li>
+                        <a href="./pages/error404.html"> <li>Microsoft Cloud</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Seguridad de Microsoft</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Azure</li></a>
+                        <a href="./pages/error404.html"> <li>Dynamics 365</li></a>
+                        <a href="./pages/error404.html"> <li>Microsoft 365</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Microsoft Adversiting</li></a
+                        >
+                        <a href="./pages/error404.html">
+                          <li>Microsoft Manufactura</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Microsoft Teams</li></a>
+                      </ul>
+                    </div>
+                    <div class="col-lg-2  text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Desarrollador y TI</li>
+                        <a href="./pages/error404.html">
+                          <li>Centro de desarrolladores</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Documentación</li></a>
+                        <a href="./pages/error404.html"> <li>Microsoft Learn</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Comunidad de Microsoft Tech</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Marketplace de Azure</li></a>
+                        <a href="./pages/error404.html"> <li>AppSource</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Microsoft Power Platform</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Visual Studio</li></a>
+                      </ul>
+                    </div>
+                    <div class="col-lg-2 text-start">
+                      <ul class="list-unstyled">
+                        <li class="fw-semibold">Compañía</li>
+                        <a href="./pages/error404.html"> <li>Trabajos</li></a>
+                        <a href="./pages/error404.html"> <li>Acerca de Microsoft</li></a>
+                        <a href="./pages/error404.html">
+                          <li>Privacidad en Microsoft</li></a
+                        >
+                        <a href="./pages/error404.html"> <li>Inversionistas</li></a>
+                        <a href="./pages/error404.html"> <li>Sustentabilidad</li></a>
+                      </ul>
+                    </div>
+                  </article>
+                </section>
+                <div class="container mx-auto my-3">
+                  <div class="row">
+                    <a href="./pages/error404.html" class="col-lg-2">Ponte en contacto con Microsoft</a>
+                    <a href="./pages/error404.html" class="col-lg-2">Privacidad</a>
+                    <a href="./pages/error404.html" class="col-lg-2">Condiciones de uso y venta</a>
+                    <a href="./pages/error404.html" class="col-lg-2">Marcas registradas</a>
+                    <a href="./pages/error404.html" class="col-lg-2">Sobre nuestra publicidad</a>
+                    <a href="./pages/error404.html" class="col-lg-2">&copy; Microsoft 2023</a>
                   </div>
-                <button type="submit" id="btnSubmit" class="btn btn-primary" >Enviar</button>
-              </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-    </main>
-    <footer></footer>
-    <script src="../js/administrador.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-
-</body>
+                </div>
+        </footer>
+          
+        <script src="../js/administrador.js" type="module"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    </body>
 </html>

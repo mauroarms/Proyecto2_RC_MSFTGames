@@ -7,6 +7,25 @@
     --verdeBoton: #008746;
     --gris: #2F3032;
 }
+.swiper {
+    padding: 20px;
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+}
+.swiper-slide img {
+    margin-top: 30px;    height: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
@@ -17,13 +36,6 @@ html {
 }
 body{
     background-color: var(--grisFondo);
-}
-header{
-    background-color: var(--grisContenedores);
-    padding: 4px;
-    height: 54px;
-    position: relative;
-    z-index: 1;
 }
 h1{
     color: var(--blancoLetras);
@@ -37,13 +49,16 @@ ul{
     list-style: none;
     padding-left: 0;
 }
+main{
+    margin-top: 18px;
+}
 li{
     color: var(--grisLetras);
-    margin: 5px 0;
 }
 li span{
     color: var(--grisClaro);
     font-size: 17px;
+
 }
 .banner{
     position: relative;
@@ -84,7 +99,7 @@ li span{
     height: 453px;
 }
 .contTitProduct h2{
-    font-family:'Bahnschrift Light';
+    font-family:'Bahnschrift';
     font-size: 40px;
     color: var(--blancoLetras);
     margin-bottom: 0;
@@ -281,7 +296,21 @@ li span{
     margin-right: 14px;
 }
 
+.card-body h3{
+    text-align: center;
+    color: var(--blancoLetras);
+}
+.form-label{
+    color: var(--blancoLetras);
+}
+
+#tres p{
+    width: 50px;
+}
 @media screen and (max-width: 767px) {
+    .banner{
+        top:40px;
+    }
     .portada{
         display: flex;
     }

@@ -1,0 +1,43 @@
+.team-card {
+  text-align: center;
+  justify-content: center;
+}
+
+.team-card .card {
+  border-top: 4px solid rgb(0, 103, 184);
+}
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    color: white; 
+}
+
+.featured-article {
+  background-image: url("https://c.s-microsoft.com/en-us/CMSFiles/ImpactSummary2023_1600x600.jpg?version=6c5ed295-5b2a-f430-4597-46686540e2d5");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  padding: 100px 0;
+  color: white;
+}
+
+.team-member-img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+.banner-paragraph {
+  font-size: 25px;
+}
+
+.card-subtitle {
+  color: rgb(0, 103, 184);
+}
+
+.about-font {
+  font-family: 'Roboto', sans-serif;
+  color: #484E58
+}

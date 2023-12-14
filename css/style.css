@@ -235,3 +235,11 @@ footer a:hover {
     color: #464646;
     text-decoration: underline;
 }
+@media screen and (max-width: 767px) {
+    nav{
+        height: 80px;
+    }
+    .navbar-brand img{
+        width: 150px;
+    }
+}

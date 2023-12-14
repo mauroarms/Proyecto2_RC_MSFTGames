@@ -83,10 +83,7 @@ li span{
 .portada{
     display: flex;
 }
-.portada img{
-    width: 177px;
-    height: 265px;
-}
+
 .cont-banner{
     position: absolute;
     z-index: 1;
@@ -307,16 +304,21 @@ li span{
 #tres p{
     width: 50px;
 }
+
+.swiper-slide{
+    width: 25% !important;
+}
 @media screen and (max-width: 767px) {
     .banner{
         top:40px;
     }
     .portada{
         display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
     .portada img{
-        width: 80px;
-        height: 120px;
+        width: 100%;
     }
     .cont-banner .m-lg-5{
         margin: 20px;
@@ -388,6 +390,12 @@ li span{
     }
     .recomendaciones{
         margin: 20px;
+    }
+    .swiper-wrapper{
+        gap: 32px !important;
+    }
+    .swiper-slide{
+        width: 100% !important;
     }
 }
 

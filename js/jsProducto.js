@@ -176,6 +176,7 @@ renderJuegos();
 
 /* ===================== COMENTARIOS ========================*/
 const contenedorComentario = document.getElementById("contenedorComentario");
+const etiqSinCom = document.createElement("div");
 
 const agregarComentario = (Comentario) =>{
 
@@ -258,10 +259,10 @@ const graficarComentarios = (comentarios) =>{
     if(comentarios.length>0){
         for(let i=0; i<comentarios.length; i++) agregarComentario(comentarios[i]);
     }else{
-        const etiqComentario = document.createElement("div")
-        etiqComentario.innerHTML = `
+        
+        etiqSinCom.innerHTML = `
         <h2 class="text-center">Nadie ha comentado todavía... ¡Agrega un comentario!`
-        contenedorComentario.appendChild(etiqComentario)
+        contenedorComentario.appendChild(etiqSinCom)
     }
 }
 const abrirModalComentario = (e) =>{
@@ -352,7 +353,6 @@ const refrescarPuntuacion=(comentarios)=>{
 
 }
 
-
 const arrayComentarios = JSON.parse(localStorage.getItem(codigoJuego)) || [];
 graficarComentarios(arrayComentarios);
 refrescarPuntuacion(arrayComentarios);
@@ -374,7 +374,12 @@ const crearComentario = (e) =>{
     /*Crear Comentario*/
     const nuevoComentario = new Comentario(usuario.value,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
     
+    
     /*Agregar Pelicula al Array*/
+    if(arrayComentarios.length === 0){
+        contenedorComentario.removeChild(etiqSinCom)
+    }
+
     arrayComentarios.push(nuevoComentario);
 
     /*Ejecutar función que guarda el Array de peliculas actualizado*/

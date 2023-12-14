@@ -1,0 +1,407 @@
+:root{
+    --grisContenedores: #151517;
+    --grisFondo: #1a1b1e;
+    --grisClaro: #484E58;
+    --grisLetras: #b6bcc0;
+    --blancoLetras: #f1f8ff;
+    --verdeBoton: #008746;
+    --gris: #2F3032;
+}
+.swiper {
+    padding: 20px;
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+}
+.swiper-slide img {
+    margin-top: 30px;    height: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--grisFondo);
+}
+h1{
+    color: var(--blancoLetras);
+    font-size: 30px;
+}
+h2, p, h3, h4, h5{
+    color: var(--blancoLetras);
+}
+ul{
+    
+    list-style: none;
+    padding-left: 0;
+}
+main{
+    margin-top: 18px;
+}
+li{
+    color: var(--grisLetras);
+    margin: 5px 0;
+}
+li span{
+    color: var(--grisClaro);
+    font-size: 17px;
+}
+.banner{
+    position: relative;
+}
+.imgBanner{
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+.grisOscuFondo{
+    background-color: var(--grisContenedores);
+}
+.grisFondo{
+    background-color: var(--grisFondo);
+}
+.imgBanner img{
+    filter: blur(15px);
+    z-index: 1;
+    height: 448px;
+    width: 100%;
+}
+.portada{
+    display: flex;
+}
+.portada img{
+    width: 177px;
+    height: 265px;
+}
+.cont-banner{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.65);
+    display: flex;  
+    flex-direction: column; 
+    width: 100%;
+    height: 453px;
+}
+.contTitProduct h2{
+    font-family:'Bahnschrift';
+    font-size: 40px;
+    color: var(--blancoLetras);
+    margin-bottom: 0;
+}
+.contTitProduct p, .contTitProduct h6{
+    font-family:'Bahnschrift';
+    font-size: 20px;
+    color: var(--grisLetras);
+}
+.contTitProduct p i{
+    margin: 10px 0px;
+}
+.botonesProducto{
+    margin: 34px 0;
+    display: flex;
+}
+.btnPersonalizado{
+    padding: 0px 18px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    background-color: var(--verdeBoton);
+    box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+}
+.btnPersonalizado span{
+    background-color: var(--blancoLetras);
+    color: var(--verdeBoton);
+    font-size: 10px;
+    margin-left: 5px; 
+}
+.btnSecundarios{
+    background-color: var(--grisClaro);
+    border-color: var(--grisClaro);
+    min-width: 62px;
+    margin-right: 20px;
+    box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+}
+.btnSecundarios i{
+    font-size: 20px;
+}
+.botonesProducto p{
+    color: var(--blancoLetras);;
+    padding: 10px;
+}
+
+/* CATEGORIA */
+.categoria{
+    position: relative;
+    z-index: 1;
+    background-color: var(--grisContenedores);
+    color: var(--blancoLetras);
+}
+.esrbRate{
+    display: flex;
+}
+.esrbRate{
+    display: flex;
+}
+.esrbRate hr{
+    width: 80px;
+    border-width: 3px;  
+}
+.esrbRate a{
+    text-decoration: none;
+    color: var(--blancoLetras);
+    background-color: var(--grisClaro);
+    padding: 3.5px;
+    border-radius: 5px;
+}
+.esrbRate a:hover{
+    background-color: var(--grisLetras);
+}
+.avisosProducto{
+    color: var(--grisLetras);
+    font-size: 14px;
+}
+.avisosProducto span{
+    text-decoration: underline;
+}
+
+/* TABS */
+
+.tab_box{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.tab_box button{
+    color: var(--grisClaro);
+    font-family:'Bahnschrift';
+    background-color: var(--grisFondo);
+    border: none;
+    font-size: 19px;
+
+}
+.tab_box .tab_btn.active{
+    color: var(--blancoLetras);
+}
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving{
+    from{transform: translateX(50px); opacity: 0;}
+    to{transform: translateX(0px); opacity: 1;}
+}
+.content_box .content.active{
+    display: block;
+}
+.line{
+    position:absolute;
+    top: 45px;;
+    left: 0px;
+    width: 90px;
+    height: 5px;
+    background-color: var(--blancoLetras);
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+}
+.carousel{
+    box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+}
+.contenidoDescripcion .galeria{
+    width: 100%;
+    height: 500px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;   
+}
+.contenidoDescripcion p{
+    font-size: 14.5px;
+}
+.separador{
+    background-color: #484E58;
+    height: 1.5px;
+    width: 100%;
+}
+
+/* Opiniones */
+.opiniones h2{
+    font-size: 120px;
+}
+.opiniones{
+    background-color: var(--gris);
+    border-radius: 15px;
+    box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 12px 15px 24px 0px rgba(0,0,0,0.8);
+}
+.gridOpiniones{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+#uno{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-right: 15px
+}
+#dos{
+    grid-row: 1/2;
+    grid-column: 2/9;
+}
+#tres{
+    grid-row: 1/2;
+    grid-column: 9/10;
+}
+#uno p, #tres p{
+    font-size: 16px;
+}
+.comentario{
+    background-color: var(--gris);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+}
+.usuario img{
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+
+.card-body h3{
+    text-align: center;
+    color: var(--blancoLetras);
+}
+.form-label{
+    color: var(--blancoLetras);
+}
+
+#tres p{
+    width: 50px;
+}
+@media screen and (max-width: 767px) {
+    .portada{
+        display: flex;
+    }
+    .portada img{
+        width: 80px;
+        height: 120px;
+    }
+    .cont-banner .m-lg-5{
+        margin: 20px;
+        height: 410px;
+    }
+    .contTitProduct h2{
+        font-size: 17px;
+        margin-bottom: 0;
+    }
+    .contTitProduct p, .contTitProduct h6{
+        font-size: 12px; 
+    }
+    .botonesProducto{
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .botonesProducto p{
+        display: none;
+    }
+    .btnPersonalizado{
+        border-radius: 30px;
+        padding: 0px 18px;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .btnPersonalizado span{
+        font-size: 10px;
+        margin-left: 5px; 
+    } 
+    .btnSecundarios{
+        border-radius: 30px;
+        min-width: 62px;
+        margin-right: 0px;
+    }
+    .btnSecundarios i{
+        font-size: 15px;
+    }
+    .botonesProducto p{
+        color: var(--blancoLetras);;
+        padding: 10px;
+    } 
+    .categoria .row{
+        margin: 0 20px;
+    }
+    .tab_box .mx-lg-5{
+        margin: 0px 25px;
+    }
+    .tab_box button{
+        font-size: 14px;
+    }
+    .line{
+        width: 65px;
+        height: 3px;
+    }
+    .content_box{
+        margin: 0 20px;
+    }
+    .contenidoDescripcion .galeria{
+        height: 280px;
+    }
+    .carousel-item img{
+        height: 280px;
+    }
+    .opiniones h2{
+        font-size: 90px;
+    }
+    .recomendaciones{
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width:1080px){
+    .cont-banner .m-lg-5{
+        margin: 45px;
+    }
+    .categoria .row{
+        margin: 0 45px;
+    }
+    .content_box{
+        margin: 0 45px;
+    }
+    .recomendaciones{
+        margin: 45px;
+    }
+    .tab_box .mx-lg-5{
+        margin: 0px 45px;
+    }
+}

@@ -1,0 +1,114 @@
+:root {
+    --grisContenedores: #151517;
+    --grisFondo: #1a1b1e;
+    --grisClaro: #484E58;
+    --grisLetras: #b6bcc0;
+    --blancoLetras: #f1f8ff;
+    --verdeBoton: #008746;
+    --gris: #2F3032;
+}
+
+body {
+    background-color: var(--grisFondo);
+    color: var(--blancoLetras);
+}
+
+header {
+    background-color: var(--grisContenedores);
+}
+
+nav {
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-link {
+    color: var(--blancoLetras) !important;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--blancoLetras);
+}
+
+main {
+    margin-top: 70px; /* Altura del header */
+}
+
+.seccionAdministrador {
+    text-align: center;
+}
+
+.table {
+    background-color: var(--grisContenedores);
+    color: var(--blancoLetras);
+}
+
+.table th, .table td {
+    border-color: var(--grisClaro);
+}
+
+.table thead th {
+    background-color: var(--gris);
+}
+
+.modal-content {
+    background-color: var(--grisContenedores);
+    color: var(--blancoLetras);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.modal-title {
+    color: var(--verdeBoton);
+}
+
+.form-label, .form-control {
+    color: var(--blancoLetras);
+}
+
+.btn-primary {
+    background-color: var(--verdeBoton);
+    border-color: var(--verdeBoton);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--verdeBoton), 10%);
+    border-color: darken(var(--verdeBoton), 10%);
+}
+
+.imgContainer{
+    display: none;
+}
+
+.seccionAdministrador{
+    text-align: center;
+}
+
+.table.align-middle td,
+.table.align-middle th {
+    vertical-align: middle ;
+    text-align: center;
+}
+
+.adminHead{
+    background-color: var(--gris);
+    padding: 16px;
+    border-radius: 10px;
+}
+
+@media (min-width: 991.98px){
+    .imgContainer{
+        display: block;
+        margin: auto;
+    }
+    .seccionAdministrador{
+        text-align: start;
+    }
+    
+}

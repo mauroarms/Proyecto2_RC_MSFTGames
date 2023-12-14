@@ -304,11 +304,9 @@ li span{
     color: var(--blancoLetras);
 }
 
-#longBarra1{
-    width: 0%
+#tres p{
+    width: 50px;
 }
-
-
 @media screen and (max-width: 767px) {
     .portada{
         display: flex;

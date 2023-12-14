@@ -70,6 +70,9 @@ const graficarJuego = (Juego) =>{
     const imagenBanner = document.querySelector(".imgBanner img")
     imagenBanner.src = Juego.imagen
 
+    const imgCarrousel = document.getElementById("primeraImgCarrousel")
+    imgCarrousel.src = Juego.imagen
+
     const creadorYCategoria = document.querySelector(".contTitProduct h6");
     creadorYCategoria.innerHTML = Juego.creador + " • " + Juego.genero
 

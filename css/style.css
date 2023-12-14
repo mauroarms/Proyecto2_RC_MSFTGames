@@ -246,6 +246,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.game a {
+    width: 100%;
+}
 
 @media (max-width: 998px) {
 

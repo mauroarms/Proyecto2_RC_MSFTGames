@@ -163,7 +163,7 @@
                 </button>
             </div>
             </section>
-            <div class="table-responsive">
+            <div class="table-responsive " data-bs-theme="dark">
                 <table class="table table-striped align-middle">
                     <thead>
                         <tr>
@@ -188,6 +188,7 @@
                 tabindex="-1"
                 aria-labelledby="modalJuegoLabel"
                 aria-hidden="true"
+                data-bs-theme="dark"
             >
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -225,6 +226,7 @@
                                         class="form-control"
                                         id="titulo"
                                         aria-describedby="titulo"
+                                        placeholder="Titulo del Juego"
                                         required
                                     />
                                 </div>
@@ -237,6 +239,7 @@
                                         rows="4"
                                         class="form-control"
                                         required
+                                        placeholder="Descripcion de que trata el juego"
                                     ></textarea>
                                 </div>
                                 <div class="mb-3">
@@ -249,6 +252,7 @@
                                         id="imagen"
                                         aria-describedby="imagen"
                                         required
+                                        placeholder="URL de la imagen de portada"
                                     />
                                 </div>
                                 <div class="mb-3">
@@ -292,6 +296,7 @@
                                         id="creador"
                                         aria-describedby="Creador"
                                         required
+                                        placeholder="Creador del Juego"
                                     />
                                 </div>
 
@@ -355,7 +360,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer data-bs-theme="dark">
             <section class="container-fluid bg-body-secondary">
                 <article class="row py-3 px-3 g-3">
                     <div class="col-2 text-start">

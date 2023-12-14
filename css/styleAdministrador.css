@@ -27,7 +27,7 @@ nav {
 }
 
 .nav-link {
-    color: var(--blancoLetras) !important;
+    color: var(--grisContenedores) !important;
 }
 
 .navbar-toggler-icon {
@@ -57,7 +57,7 @@ main {
 
 .modal-content {
     background-color: var(--grisContenedores);
-    color: var(--blancoLetras);
+    color: var(--grisContenedores);
 }
 
 .modal-header {

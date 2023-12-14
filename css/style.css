@@ -248,6 +248,11 @@ footer a:hover {
 
 
 @media (max-width: 998px) {
+    #main{
+        position: relative;
+        top:40px;
+        
+    }
 
     #prueba1{
 

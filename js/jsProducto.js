@@ -172,10 +172,12 @@ renderJuegos();
 
 
 /* ===================== COMENTARIOS ========================*/
+const contenedorComentario = document.getElementById("contenedorComentario");
+
 const agregarComentario = (Comentario) =>{
 
     const estrellas = definirEstrellas(Comentario)
-    const contenedorComentario = document.getElementById("contenedorComentario");
+    
     const etiqComentario = document.createElement("div")
     etiqComentario.innerHTML = `
     <div class="comentario p-4">
@@ -194,7 +196,7 @@ const agregarComentario = (Comentario) =>{
     </div>
     `
 
-    contenedorComentario.appendChild(etiqComentario)
+    contenedorComentario.prepend(etiqComentario)
 }
 const definirEstrellas = (Comentario) =>{
     let cantidadI =""
@@ -252,6 +254,11 @@ const definirEstrellas = (Comentario) =>{
 const graficarComentarios = (comentarios) =>{
     if(comentarios.length>0){
         for(let i=0; i<comentarios.length; i++) agregarComentario(comentarios[i]);
+    }else{
+        const etiqComentario = document.createElement("div")
+        etiqComentario.innerHTML = `
+        <h2 class="text-center">Nadie ha comentado todavía... ¡Agrega un comentario!`
+        contenedorComentario.appendChild(etiqComentario)
     }
 }
 const abrirModalComentario = (e) =>{
@@ -273,7 +280,6 @@ const refrescarPuntuacion=(comentarios)=>{
     const barra3 = document.getElementById("longBarra3")
     const barra2 = document.getElementById("longBarra2")
     const barra1 = document.getElementById("longBarra1")
-    
     
     let totalCincoE = 0 
     let totalCuatroE = 0 
@@ -300,28 +306,47 @@ const refrescarPuntuacion=(comentarios)=>{
                 totalCincoE++;   
                 break;
         }
-        });
+    });
     
-        let valor5E = (totalCincoE/comentarios.length *100).toFixed(1) + "%"
-        let valor4E = (totalCuatroE/comentarios.length*100).toFixed(1) + "%"
-        let valor3E = (totalTresE/comentarios.length*100).toFixed(1) + "%"
-        let valor2E = (totalDosE/comentarios.length*100).toFixed(1) + "%"
-        let valor1E = (totalUnaE/comentarios.length*100).toFixed(1) + "%"
+        let valor5E = (totalCincoE/comentarios.length *100).toFixed(1) 
+        let valor4E = (totalCuatroE/comentarios.length*100).toFixed(1)
+        let valor3E = (totalTresE/comentarios.length*100).toFixed(1)  
+        let valor2E = (totalDosE/comentarios.length*100).toFixed(1) 
+        let valor1E = (totalUnaE/comentarios.length*100).toFixed(1) 
+        let promTotal = ((5*totalCincoE+4*totalCuatroE+3*totalTresE+2*totalDosE+totalUnaE)/comentarios.length).toFixed(1) 
+
+        if(isNaN(promTotal)){
+            promedio.innerHTML = 0 + '<i class="fa-solid fa-star"></i>'
+
+            porc5.innerHTML = 0 + "%"
+            porc4.innerHTML = 0 + "%"
+            porc3.innerHTML = 0 + "%"
+            porc2.innerHTML = 0 + "%"
+            porc1.innerHTML = 0 + "%"
+        
+            barra5.style.width = 0 + "%"
+            barra4.style.width = 0 + "%"
+            barra3.style.width = 0 + "%"
+            barra2.style.width = 0 + "%"
+            barra1.style.width = 0 + "%"
+        }else{
+            promedio.innerHTML = promTotal + '<i class="fa-solid fa-star"></i>'
+
+            porc5.innerHTML = valor5E + "%"
+            porc4.innerHTML = valor4E + "%"
+            porc3.innerHTML = valor3E + "%"
+            porc2.innerHTML = valor2E + "%"
+            porc1.innerHTML = valor1E + "%"
+        
+            barra5.style.width = valor5E + "%"
+            barra4.style.width = valor4E + "%"
+            barra3.style.width = valor3E + "%"
+            barra2.style.width = valor2E + "%"
+            barra1.style.width = valor1E + "%"
+        }
+
     
-        porc5.innerHTML = valor5E
-        porc4.innerHTML = valor4E
-        porc3.innerHTML = valor3E
-        porc2.innerHTML = valor2E
-        porc1.innerHTML = valor1E
-    
-        barra5.style.width = valor5E
-        barra4.style.width = valor4E
-        barra3.style.width = valor3E
-        barra2.style.width = valor2E
-        barra1.style.width = valor1E
-    
-        let promTotal = ((5*totalCincoE+4*totalCuatroE+3*totalTresE+2*totalDosE+totalUnaE)/comentarios.length).toFixed(1)
-        promedio.innerHTML = promTotal
+
 }
 
 

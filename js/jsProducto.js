@@ -371,6 +371,8 @@ const crearComentario = (e) =>{
     valoracion = document.getElementById("valoracionComentario"), 
     usuario = document.getElementById("autorComentario");
 
+    const formComentario = document.getElementById("formNewComentario")
+
     /*Crear Comentario*/
     const nuevoComentario = new Comentario(usuario.value,titulo.value,descripcion.value,fechaComentario,valoracion.value,codigoJuego)
     
@@ -381,6 +383,9 @@ const crearComentario = (e) =>{
     }
 
     arrayComentarios.push(nuevoComentario);
+
+    formComentario.reset()
+    
 
     /*Ejecutar función que guarda el Array de peliculas actualizado*/
     guardarEnLS();

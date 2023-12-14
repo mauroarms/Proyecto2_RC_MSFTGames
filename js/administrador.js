@@ -79,8 +79,7 @@ const validarPrecio = (precio) => {
   if (!precio) {
     return "El campo de precio es obligatorio.";
   }
-
-
+  
   return "Precio se valido sin errores"
 };
 

@@ -8,7 +8,7 @@
 html,
 body {
     background-image: url("../assets/bg.svg");
-    color: #1b1b1b;
+    color: #000000;
 }
 
 body{
@@ -24,23 +24,26 @@ body{
     max-width: 600px; 
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .title {
     line-height: 1.75rem;
-    color: #1b1b1b;
+    color: #f5e5e5;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .auth-wrapper {
-    background-color: #fff;
+    background-color: #1b1b1b;
+    color: #e6e6e6;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
     padding: 40px;
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .opts {
@@ -48,13 +51,16 @@ body{
     max-width: 100%;
     cursor: pointer;
     margin: auto;
-    background-color: #fff;
+    color: #dbd3d3;
+    background-color: #1b1b1b;
     -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
     box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    border-radius: 10px;
 }
 
 .opts:hover {
+    color: #000000;
     background-color: rgba(70, 70, 70, 0.1);
 }
 

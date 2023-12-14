@@ -7,6 +7,25 @@
     --verdeBoton: #008746;
     --gris: #2F3032;
 }
+.swiper {
+    padding: 20px;
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.52);
+}
+.swiper-slide img {
+    margin-top: 30px;    height: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
@@ -279,10 +298,15 @@ li span{
 
 .card-body h3{
     text-align: center;
-    color: var(--grisFondo);
+    color: var(--blancoLetras);
+}
+.form-label{
+    color: var(--blancoLetras);
 }
 
-
+#tres p{
+    width: 50px;
+}
 @media screen and (max-width: 767px) {
     .portada{
         display: flex;

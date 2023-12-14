@@ -145,3 +145,26 @@ export class usuario {
         }
     }
 }
+
+export class Comentario{
+
+    constructor(usuario, titulo, descripcion, fecha, cantidadEstrellas, idJuego) {
+        this.usuario = usuario;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.cantidadEstrellas = cantidadEstrellas;
+        this.idJuego = idJuego;
+    }
+
+    toJSON() {
+        return {
+            usuario: this.usuario,
+            titulo: this.titulo,
+            descripcion: this.descripcion,
+            fecha: this.fecha, // Se convierte a formato ISO para facilitar la serialización/deserialización de fechas.
+            cantidadEstrellas: this.cantidadEstrellas,
+            idJuego: this.idJuego
+        };
+    }
+}

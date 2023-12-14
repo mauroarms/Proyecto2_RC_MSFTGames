@@ -122,7 +122,7 @@ graficarJuego(juego);
 
 /* ===================== JUEGOS RECOMENDADOS ========================*/
 const getSize = () => {
-    if (screen.width <= 350) {
+    if (screen.width <= 500) {
         return 1;
     } else if (screen.width <= 750 && screen.width > 500) {
         return 2;

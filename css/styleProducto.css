@@ -54,11 +54,11 @@ main{
 }
 li{
     color: var(--grisLetras);
-    margin: 5px 0;
 }
 li span{
     color: var(--grisClaro);
     font-size: 17px;
+
 }
 .banner{
     position: relative;
@@ -308,6 +308,9 @@ li span{
     width: 50px;
 }
 @media screen and (max-width: 767px) {
+    .banner{
+        top:40px;
+    }
     .portada{
         display: flex;
     }

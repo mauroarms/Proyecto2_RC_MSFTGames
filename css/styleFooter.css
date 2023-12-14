@@ -1,0 +1,11 @@
+footer a {
+    font-size: smaller;
+    text-decoration: none;
+    line-height: 2.5;
+    color: #8b8989;
+}
+
+footer a:hover {
+    color: #464646;
+    text-decoration: underline;
+}
